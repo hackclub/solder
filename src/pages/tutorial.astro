@@ -15,12 +15,29 @@ import Sidebar from '../components/Sidebar.astro'
     <a href="/">Home</a>
     <Sidebar />
 
-    <div class="content" style="padding-left: calc(var(--spacing) * 66);">
-      <h1>heading??</h1>
-      <p>fdjskafdsf</p>
-      <ul>
-        <li><a href="/posts/post-1/">Post 1</a></li>
-      </ul>
+    <div class="content" style="padding-left: calc(var(--spacing) * 70); padding-right: calc(var(--spacing) * 6);">
+      <h1>Tutorial</h1>
+
+      <p>Note: In this tutorial we talk about the movement of electrons to simplify the conecept, but in real life they actually move in the opposite direction than what we say here.</p>
+      <br>
+
+      <p>In electronics, we deal with two main units: voltage (V), which is the difference of potential between two points (think of the force pushing electrons to go from one point to another), while current (I) is the amount of electrons passing through. </p>
+      <br>
+
+      <p>One of the fundamental parts of electrical design is resistors, which are used to limit the current flow. They are characterized by it's resistance, given by the formula R = V / I, which is also known as Ohm’s law.</p>
+      <p>If you put two resistors series, their resistance combine: It is equivalent to one resistor that has the resistance of the sum of the two original resistors. When two or more resistors are parallel, their total resistance is given by the formula Rtotal = 1/R1 + 1/R2 + 1/R3 + ...</p>
+      <br>
+
+      <p>Diodes are simple electrical components that only allows electricity to flow in one direction. When you see a diode on the schematic, it is often represented with a small triangle with a bar, which represents that electricity can only flow in the direction the triangle is pointing to.</p>
+      <br>
+
+      <p>Capacitors are like tiny batteries, they charge up when you apply a voltage across them, and their internal voltage increase. And discharge when the outside voltage is lower then their internal voltage.</p>
+      <br>
+
+      <p>Transistors are more complex, they are divided into NPN and PNP types, and these electrical components have three pins, called emmiter, collector and gate.</p>
+      <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a381d42773bcd403a74388d6688b6665c933234b_image.png">
+      <p>In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically a control circuit. If it’s voltage is the voltage on the emitter, the transister won’t allow electrons to pass. Inversly, if it’s the voltage on the collector, the transistor will allow electrons to pass.</p>
+      <br>
     </div>
 
     <Footer />
