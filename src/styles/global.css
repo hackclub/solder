@@ -11,6 +11,8 @@
   
 body {
     font-family: 'Archivo', sans-serif;
+    background-image: url("bg2.svg");
+    background-repeat: repeat;
 }
 
 .bobbing {
