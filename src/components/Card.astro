@@ -9,7 +9,7 @@ export interface Props {
 const { quantity, title, content, image } = Astro.props;
 ---
 
-<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 pb-4 pt-6 text-[#FFAD60] relative">
+<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 pb-4 pt-6 text-[#FFAD60] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:animate-pop">
     <div class="absolute top-0 -right-4 rotate-12">
         <img src="/cardnum.svg" class="relative" />
         <p class="absolute top-0 right-0 text-white font-semibold text-2xl flex items-center justify-center w-full h-full">x{quantity}</p>
