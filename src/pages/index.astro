@@ -2,6 +2,8 @@
 import "../styles/global.css";
 
 import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Home Page";
@@ -55,13 +57,10 @@ const pageTitle = "Home Page";
 			<p class="m-2">3. Submit on GitHub</p>
 			<p class="m-2">4. We'll ship you your kit</p>
 			<p class="m-2">5. Solder your project together</p>
-
-
-
 		</div>
 
 		<div class="flex flex-col justify-center items-center mt-12">
-			<div class=" items-left">
+			<div class="items-left">
 				<div class="w-full h-1 bg-[#609AFF]"></div>
 				<p class="text-[#609AFF] text-4xl font-bold mt-8">whether it be making...</p>
 
@@ -75,6 +74,130 @@ const pageTitle = "Home Page";
 				</div>
 				<p class="text-[#609AFF] text-4xl font-bold mt-8">you could do a lot with a few simple parts!</p>
 			</div>
+		</div>
+
+		<div class="flex flex-col justify-center items-center mt-12">
+			<div class="">
+				<p class="text-[#FFAD60] text-5xl font-bold">what's in the kit?</p>
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-8 justify-center">
+
+				<Card 
+					quantity="4"
+					title="5mm LED" 
+					content="random colors!" 
+					image="/hardware/leds.png"
+			  	/>
+				<Card 
+					quantity="4"
+					title="220Ω resistor" 
+					content="don't explode your LEDs!" 
+					image="/hardware/resistors.png"
+				/>
+				<Card 
+					quantity="2"
+					title="2N2222 transistor" 
+					content="NPN type!!" 
+					image="/hardware/transistor1.png"
+				/>
+				<Card 
+					quantity="2"
+					title="2N3906 transistor" 
+					content="PNP type!!" 
+					image="/hardware/transistor2.png"
+				/>
+				<Card 
+					quantity="2"
+					title="1N4148 diode" 
+					content="makes things go one-way" 
+					image="/hardware/diode.png"
+				/>
+				<Card 
+					quantity="2"
+					title="10uF capacitor" 
+					content="stores energy" 
+					image="/hardware/capacitor.png"
+				/>
+				<Card 
+					quantity="2"
+					title="6mm push button" 
+					content="very tactile. very clicky." 
+					image="/hardware/push.png"
+				/>
+				<Card 
+					quantity="2"
+					title="switch" 
+					content="doubles as a fidget toy" 
+					image="/hardware/push.png"
+				/>
+				<Card 
+					quantity="1"
+					title="breadboard" 
+					content="use this to prototype!" 
+					image="/hardware/breadboard.png"
+				/>
+				<Card 
+					quantity="??"
+					title="jumper wires" 
+					content="use on breadboard!" 
+					image="/hardware/wires.png"
+				/>
+				<Card 
+					quantity="2"
+					title="CR2032 battery cell" 
+					content="to hold the battery!" 
+					image="/hardware/cell.png"
+				/>
+				<Card 
+					quantity="1"
+					title="PCB grant" 
+					content="to order your circuit board!" 
+					image=""
+				/>
+			</div>
+
+			<div class="text-center text-[#FF7A60] mt-8">
+				<p>... want to make something more complex?</p>
+				<p class="font-bold text-4xl">choose an add-on kit!</p>
+			</div>
+
+			<div class="grid grid-cols-3 gap-4 mt-8 text-[#FF7A60]">
+				<div class="border-dashed border-4 rounded-md border-[#FF7A60] p-8 pb-4 pt-6">
+					<p class="font-bold text-xl">LEDs</p>
+					<ul class="list-disc ml-8 mt-2">
+						<li>25x 5mm LEDs (request for specific colors!)</li>
+						<li>25x 220Ω resistors</li>
+						<li>10x 6mm push buttons</li>
+					</ul>
+					<p class="mt-2"><i>this is enough to make a 3x3x3 led matrix!</i></p>
+				</div>
+				<div class="border-dashed border-4 rounded-md border-[#FF7A60] p-8 pb-4 pt-6">
+					<p class="font-bold text-xl">Cool Parts :tm:</p>
+					<ul class="list-disc ml-8 mt-2">
+						<li>2x buzzers</li>
+						<li>2x vibrator motors</li>
+						<li>8x potentiometors</li>
+						<li>2x 4-pin rainbow LEDs</li>
+					</ul>
+					<p class="mt-2"><i>fun stuff here</i></p>
+				</div>
+				<div class="border-dashed border-4 rounded-md border-[#FF7A60] p-8 pb-4 pt-6">
+					<p class="font-bold text-xl">Transistors</p>
+					<ul class="list-disc ml-8 mt-2">
+						<li>22x 2N2222 transistors</li>
+						<li>22x 2N3906 transistors</li>
+						<li>2x 10uF capacitors</li>
+						<li>20x 4.7k ohm resistors</li>
+						<li>6x 100 ohm resistors</li>
+						<li>2x 100k ohm resistors</li>
+						<li>2x 10k ohm resistors</li>
+						<li>4x potentiometers</li>
+					</ul>
+					<p class="mt-2"><i>this is enough two whole 555 timers!</i></p>
+				</div>
+
+			</div>
+
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 lg:px-24 2xl:px-44">
@@ -95,9 +218,6 @@ const pageTitle = "Home Page";
 				<p class="text-xl">insert drawing here</p>
 			</div>	*/}
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
-				<p class="text-xl">insert drawing here</p>
-			</div>	
-			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
 				<p class="text-xl">what's in the kit?</p>
 				<ul class="list-disc ml-8">
 					<li>10x 220 ohm resistors</li>
@@ -109,6 +229,16 @@ const pageTitle = "Home Page";
 					<li>and everything you need to solder!</li>
 				</ul>
 				<p>want to request a part? ask for it in #solder!</p>
+			</div>	
+			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
+				<p class="text-xl">submission requirements</p>
+				<ul class="list-disc ml-8">
+					<li>needs to be original</li>
+					<li>pcb needs to fit within 100x100mm</li>
+					<li>use the components given in the kit!</li>
+
+				</ul>
+				
 			</div>
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
 				<p class="text-xl">club leader at your school?</p>

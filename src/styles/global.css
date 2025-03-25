@@ -1,14 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-@font-face {
-    font-family: 'bradley';
-    src: url('../../public/fonts/BradleyHandITCTT-Bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
 html {
     scroll-behavior: smooth;
 }
