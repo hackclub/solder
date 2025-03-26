@@ -43,7 +43,24 @@ import Sidebar from '../components/Sidebar.astro'
       <img src="/tutorial/schematic.png" />
       <p>A schematic is basically a diagram of the electrical circuit that expresses what parts you use and how they are connected. Note that they don't convey irl positioning - draw your part anywhere you want!</p>
 
-      <p>For this tutorial we are just going to make three button controlled LEDs. Firstly, we need a battery to power the device, so press A and search "Battery_cell", click OK and click anywhere on the schematic to place the component.</p>
+      <p>For this tutorial we are just going to make three button controlled LEDs. Firstly, we need a battery to power the device, so press A and search "Battery_cell", click OK and click anywhere on the schematic to place the component. When you are placing the component, you and also press R to rotate it! We are using CR2032s as batteries, so on the + side of the terminal, there will be 3V and on the opposite side, it will be ground.</p>
+
+      <p>Add a few more components in the same way: Two LEDs named "LED" and two resistors named "R". Your schematic should look like this:</p>
+      <img src="/tutorial/schematic-nc.png" />
+
+      <p>The presence of LEDs are obvious, since we need them to be able to emit light. As the name of the name "Light Emitting Diodes" implies, their behaviour is the same as normal diodes, they just emit light at the same time.</p>
+
+      <p>The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black)</p>
+
+      <p>For the values of the resistors, it is 220ohms!</p>
+
+      <p>Time to add wires! Wires are basically paths that electricity will flow through. We would like to wire the positive end of our battery (the end where there is a +: Where electricity departs) up to the back of the LEDs. Then at the we wire the output of our LEDs up to the resistors. (You can change the order of the LED and resistor!) After that we will want to wire the other end of the reistor to the ground of the battery.</p>
+      
+      <p>To do this, hover your mouse over one end of a symbol, and press W to start wirering. Drag the wire around, if you want to make a turn, press W again to anchor your wire onto the current spot, and continue dragging. When you are at your desired destination symbol's end, press W to place. You should have something like this:</p>
+
+      <img src="/tutorial/schematic-wc.png" />
+
+      <p>Great job! Now it's the time to associate footprints to the symbols.</p>
 
       <img src="/tutorial/pcb.png" />
 
