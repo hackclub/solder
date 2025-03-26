@@ -60,13 +60,70 @@ import Sidebar from '../components/Sidebar.astro'
 
       <img src="/tutorial/schematic-wc.png" />
 
-      <p>Great job! Now it's the time to associate footprints to the symbols.</p>
+      <p>Great job! Now it's the time to associate footprints to the symbols. Press the following button on the top of KiCAD:</p>
 
+      <img src="/tutorial/link.png" />
+
+      <p>You should be presented with a table of all the components you have placed. Press a symbol's row, find the corresponding footprint using the following table, search it up in the top bar and double click the right entry on the right hand side. Repeat this for each component.</p>
+
+      <!-- TODO: Style this up -->
+
+      <table>
+      <thead>
+      <tr>
+      <th>Symbol</th>
+      <th>Footprint</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>R</td>
+      <td>R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</td>
+      </tr>
+      <tr>
+      <td>LED</td>
+      <td>LED_D5.0mm</td>
+      </tr>
+      <tr>
+      <td>Button</td>
+      <td>SW_PUSH_6mm</td>
+      </tr>
+      <tr>
+      <td>Battery</td>
+      <td>BatteryHolder_Multicomp_BC-2001_1x2032</td>
+      </tr>
+      <tr>
+      <td>NPN</td>
+      <td>TO-92L_HandSolder</td>
+      </tr>
+      <tr>
+      <td>PNP</td>
+      <td>TO-92L_HandSolder</td>
+      </tr>
+      <tr>
+      <td>C</td>
+      <td>CP_Radial_D8.0mm_P5.00mm</td>
+      </tr>
+      <tr>
+      <td>R_Potentiometer</td>
+      <td>Potentiometer_Runtron_RM-065_Vertical</td>
+      </tr>
+      <tr>
+      <td>Conn_01xN_Pin</td>
+      <td>PinHeader_1xN_P2.54mm_Vertical (Replace N!)</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <p>At the end, you should have something like this:</p>
+      <img src="/tutorial/linked.png" />
+
+      <p>Now go back to the starting KiCAD window, and press this button to open the PCB editor:</p>
       <img src="/tutorial/pcb.png" />
 
       <h2>Advanced parts</h2>
       <h4>Transistors</h4>
-      <p>Transistors are more complex, they are divided into NPN and PNP types, and these electrical components have three pins, called emmiter, collector and gate.</p>
+      <p>Transistors are more complex, they are divided into NPN and PNP types, and they have three pins, called emmiter, collector and gate.</p>
       <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a381d42773bcd403a74388d6688b6665c933234b_image.png">
       <p>In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically a control circuit. If it’s voltage is the voltage on the emitter, the transister won’t allow electrons to pass. Inversly, if it’s the voltage on the collector, the transistor will allow electrons to pass.</p>
     </div>
