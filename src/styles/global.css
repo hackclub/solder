@@ -103,3 +103,20 @@ h6 {
     margin-right: 0;
     font-weight: bold;
 }
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
