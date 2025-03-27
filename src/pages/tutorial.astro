@@ -120,6 +120,50 @@ import Sidebar from '../components/Sidebar.astro'
 
       <p>Now go back to the starting KiCAD window, and press this button to open the PCB editor:</p>
       <img src="/tutorial/pcb.png" />
+      
+      <p>After that, click Update PCB from schematic at the top of the screen:</p>
+      <img src="/tutorial/update-from-schematic.png" />
+
+      <p>You should now have parts under your mouse, click anywhere to place them.</p>
+      <img src="/tutorial/parts-unplaced.png" />
+
+      <p>This PCB is a design of your IRL circuit board, so this time the placement of components will matter - Where you place them is where they turn out on the final product, so think carefully where they should go!</p>
+
+      <p>Click on a component and press M to drag them around, and press R to rotate. If you want to place a component on the back side, press F to flip. Here is the placement I'm going with:</p>
+      <img src="/tutorial/parts-placed.png" />
+
+      <p>Now, go on the right menu bar, and select "Edge.Cuts". After that select the draw rectangle tool</p>
+
+      <img src="/tutorial/draw-rectange.png" />
+
+      <p>Use this tool to draw a rectangle around your components - That will be the outline of your circuit board and mark the size of the physical product.</p>
+
+      <img src="/tutorial/board-outline.png" />
+
+      <p>Great job! The only thing left is wirering the board. Hit X on your keyboard and while hovering over any golden pad with a thin blue line poking out of it. It should dim the entire screen, and show you which direction you need to go with a thin blue line and highlight the destination:</p>
+
+      <img src="/docs/v2/routing.png" className="max-w-96" />
+
+      <p>**Attention**! Wires and pads of different colors (except golden) can't be connected together directly! You must via to the other side.</p>
+
+      <p>If you want to start routing from the back side, select "B.Cu" on the right menu bar.</p>
+
+      <p>Continue until there are no thin blue lines on the screen! The final product should look something like this:</p>
+      <img src="/tutorial/routed.png" />
+
+      <p>Good work! You're almost done with the PCB. Let's run the DRC to make sure the PCB works. The silkscreen warnings you see are okay, make sure there are no more errors!</p>
+
+      <img src="/docs/v2/drcbutton.png" />
+
+      <p>If there are, please resolve them! Otherwise we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager"</p>
+
+      <img src="/docs/v2/plugins.png" />
+
+      <p>Search up "Fabrication Toolkit" and install it. Now go back to the PCB editor, you should see a new button appear, click it and click generate</p>
+
+      <img src="/docs/v2/fabrication-toolkit.png" />
+
+      <p>Contgrats on making a PCB! You should find a .zip of your project in the "production" subfolder of your project's directory - thats the file that you need to send to the manufaturers!</p>
 
       <h2>Advanced parts</h2>
       <h4>Transistors</h4>
