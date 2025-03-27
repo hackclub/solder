@@ -40,14 +40,20 @@ button:hover {
     50% {
         transform: scale(1.03);
     }
-    100% {
-        transform: scale(1);
-    }
 }
 
 .hover\:animate-pop:hover {
     animation: pop 0.3s ease-in-out;
 }
+
+.popping {
+    transition: transform 0.16s ease-in-out;
+}
+
+.popping:hover {
+    transform: scale(1.1); 
+}
+
 
 h1 {
     display: block;

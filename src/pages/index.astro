@@ -28,17 +28,31 @@ const pageTitle = "Home Page";
 			<img src="/orph.svg" class="absolute top-0 left-6"/>
 			<a href="tutorial"><button class="p-2 px-10 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl absolute top-4 right-6 text-white font-bold">tutorial</button></a>
 
+
+			<div class="hidden md:block">
+				<div class="group">
+					<img src="/hardware/timer.png" class="absolute w-80 top-20 right-20 popping opacity-90 hover:opacity-95"/>
+					<div class="absolute top-20 right-36 bg-black text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-90 transition-opacity duration-00">
+						this is a 555 timer, remade!
+					</div>
+				</div>
+			</div>
+
 			<div class="text-center mb-4 mt-20 mx-5 text-balance relative">
-				<img src="/arrow2.svg" class="absolute left-[420px] -top-2"/>
-				<p class="text-[#FFAD60] absolute left-84 -top-8"><i>or 2nd, or 3rd, or nth</i></p>
+				<div class="hidden lg:block">
+					<img src="/arrow2.svg" class="absolute left-[420px] -top-2"/>
+					<p class="text-[#FFAD60] absolute left-84 -top-8"><i>or 2nd, or 3rd, or nth</i></p>
+				</div>
 				<p class="text-6xl font-bold">make your first <span class="bg-gradient-to-r from-[#FF60A8] to-[#ff607a] inline-block text-transparent bg-clip-text">circuit board</span></p>
-				<img src="/arrows4.svg" class="absolute -right-5 -top-5"/>
-				<img src="/arrow3.svg" class="absolute left-4"/>
-				<p class="absolute text-[#FFAD60] rotate-30 left-8 bottom-5"><i>then</i></p>
+				<div class="hidden lg:block">
+					<img src="/arrows4.svg" class="absolute -right-5 -top-5"/>
+					<img src="/arrow3.svg" class="absolute left-4"/>
+					<p class="absolute text-[#FFAD60] rotate-30 left-8 bottom-5"><i>then</i></p>
+				</div>
 				<p class="text-3xl mt-6 sm:mt-4"><i>get a kit of electronics to assemble it for free!</i></p>
 			</div>
 
-			<div class="flex-wrap mx-5 text-white mt-3 text-lg font-semibold">
+			<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center mx-5 text-white mt-3 text-lg font-semibold">
 				<a href="#about"><button class="p-2 px-6 bg-[#FFAD60] rounded-3xl mb-2 md:mb-0 md:mr-2">how this works</button></a>
 				<a href="tutorial"><button class="p-2 px-6 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl mb-2 md:mb-0 md:mr-2">read the tutorial</button></a>
 				<a href="https://github.com/hackclub/solder" target="_blank" rel="noopenner noreferrer"><button class="p-2 px-6 bg-[#609AFF] rounded-3xl">submit on github</button></a>
@@ -47,7 +61,7 @@ const pageTitle = "Home Page";
 			<img src="/arrows.svg" class="mt-20 bobbing"/>
 
 			<div class="absolute bottom-12 w-full text-center mx-5 max-w-3xl font-semibold">
-				<p class="text-[#FFAD60]">Solder is a program by Hack Club, free for teens worldwide! Ends [May 30].</p>
+				<p class="text-[#FFAD60] text-balance">Solder is a program by Hack Club, free for teens worldwide! Ends [May 30].</p>
 			</div>
 		</div>
 
@@ -59,6 +73,7 @@ const pageTitle = "Home Page";
 			<p class="m-2">5. Solder your project together</p>
 		</div>
 
+		{/*
 		<div class="flex flex-col justify-center items-center mt-12">
 			<div class="items-left">
 				<div class="w-full h-1 bg-[#609AFF]"></div>
@@ -68,19 +83,25 @@ const pageTitle = "Home Page";
 					<div class="border-dashed border-4 rounded-md border-[#609AFF] p-6 py-8 text-[#609AFF]"><p class="max-w-[140px]">a simple keychain that lights up</p></div>
 					<div class="border-dashed border-4 rounded-md border-[#609AFF] p-6 py-8 text-[#609AFF]">a name badge for conventions</div>
 					<div class="border-dashed border-4 rounded-md border-[#609AFF] p-6 py-8 text-[#609AFF]">an xor logic gate from transistors</div>
-					<div class="border-dashed border-4 rounded-md border-[#609AFF] p-6 py-8 text-[#609AFF]">the internals of a 555 timer from scratch</div>
+					<div class="border-dashed border-4 rounded-md border-[#609AFF] p-6 py-8 text-[#609AFF] grid grid-cols-2">
+						<p class="max-w-[140px]">the internals of a 555 timer from scratch</p>
+						<div class="relative">
+							<img src="/hardware/timer.png" class="absolute right-0 -top-4"/>
+						</div>
+			
+					</div>
 
 
 				</div>
 				<p class="text-[#609AFF] text-4xl font-bold mt-8">you could do a lot with a few simple parts!</p>
 			</div>
-		</div>
+		</div> */}
 
 		<div class="flex flex-col justify-center items-center mt-12">
 			<div class="">
 				<p class="text-[#FFAD60] text-5xl font-bold">what's in the kit?</p>
 			</div>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-8 justify-center">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-8 justify-center text-center items-center">
 
 				<Card 
 					quantity="6"
@@ -114,8 +135,8 @@ const pageTitle = "Home Page";
 				/>
 				<Card 
 					quantity="1"
-					title="GL5528 photoresistor" 
-					content="senses light..." 
+					title="photoresistor" 
+					content="GL5528 + senses light..." 
 					image="/hardware/photoresistor.png"
 				/>
 				<Card 
@@ -144,7 +165,7 @@ const pageTitle = "Home Page";
 					image="/hardware/breadboard.png"
 				/>
 				<Card 
-					quantity="??"
+					quantity="30"
 					title="jumper wires" 
 					content="use on breadboard!" 
 					image="/hardware/wires.png"
