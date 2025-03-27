@@ -16,7 +16,7 @@ const pageTitle = "Home Page";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Solder - make a PCB!</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,12 +125,6 @@ const pageTitle = "Home Page";
 					image="/hardware/push.png"
 				/>
 				<Card 
-					quantity="2"
-					title="switch" 
-					content="doubles as a fidget toy" 
-					image="/hardware/push.png"
-				/>
-				<Card 
 					quantity="1"
 					title="breadboard" 
 					content="use this to prototype!" 
@@ -150,12 +144,16 @@ const pageTitle = "Home Page";
 				/>
 				<Card 
 					quantity="1"
-					title="PCB grant" 
-					content="to order your circuit board!" 
+					title="solder + iron" 
+					content="to solder your board with!" 
 					image=""
 				/>
 			</div>
 
+			<p class="mt-8 font-bold text-2xl text-[#FFAD60]">... and a grant to manufacture the printed circuit board you designed!</p>
+
+
+			{/* 
 			<div class="text-center text-[#FF7A60] mt-8">
 				<p>... want to make something more complex?</p>
 				<p class="font-bold text-4xl">choose an add-on kit!</p>
@@ -196,7 +194,7 @@ const pageTitle = "Home Page";
 					<p class="mt-2"><i>this is enough two whole 555 timers!</i></p>
 				</div>
 
-			</div>
+			</div>*/}
 
 		</div>
 
@@ -218,17 +216,7 @@ const pageTitle = "Home Page";
 				<p class="text-xl">insert drawing here</p>
 			</div>	*/}
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
-				<p class="text-xl">what's in the kit?</p>
-				<ul class="list-disc ml-8">
-					<li>10x 220 ohm resistors</li>
-					<li>5x capacitors</li>
-					<li>2x diodes</li>
-					<li>wires maybe</li>
-					<li>coin cell battery holder</li>
-					<li>$5 pcb manufacturing grant!</li>
-					<li>and everything you need to solder!</li>
-				</ul>
-				<p>want to request a part? ask for it in #solder!</p>
+				<p class="text-xl">insert drawing here</p>
 			</div>	
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
 				<p class="text-xl">submission requirements</p>
@@ -241,10 +229,13 @@ const pageTitle = "Home Page";
 				
 			</div>
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
-				<p class="text-xl">club leader at your school?</p>
-				<p class="">run a workshop!</p>
-				<p class="">after your members submit, we’ll send you all the parts as one large kit, straight to your club - and you can assemble it together too!</p>
-				<button class="p-2 px-6 bg-[#FFAD60] rounded-lg text-white">learn more here</button>
+				<p class="text-2xl font-bold">Club leader at your school?</p>
+				<p class="mt-2">Run a workshop!</p>
+				<p class="mt-2">We'll send you a kit for every member that submits, straight to your club - and you can assemble it together too! Send some pictures for some special swag!</p>
+				<button class="mt-2 p-1 px-6 bg-[#FFAD60] rounded-2xl text-white">learn more here</button>
+				<p class="mt-4 text-2xl font-bold">Teacher?</p>
+				<p class="mt-2">Run a solder workshop in your class! Get your students to learn about electrical components, get them to make their own PCB, and we'll ship you some kits too :D</p>
+				<p class="mt-2">Email for more info or to sign up!</p>
 			</div>
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60]">
 				<p class="text-xl">insert drawing here</p>
