@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BaseLayout.astro
-pageTitle: 'idk man'
+title: 'idk man'
 ---
 
 hello hello hello
