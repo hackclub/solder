@@ -1,8 +1,9 @@
 ---
+import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
-import '../styles/global.css';
-const pageTitle = "Home fdjsklfds fjdsklfs fjdslfjds fdsfjdkslfjdlsf";
+const { frontmatter, headings } = Astro.props;
+const majorHeadings = headings.filter(header => header.depth < 4);
 ---
 <html lang="en">
   <head>
@@ -10,14 +11,16 @@ const pageTitle = "Home fdjsklfds fjdsklfs fjdslfjds fdsfjdkslfjdlsf";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{frontmatter.title}</title>
   </head>
   <body>
-    
 
-    <Sidebar />
+    <Sidebar title={frontmatter.title} sections={majorHeadings} />
 
-    <h1>{pageTitle}</h1>
+    <div class="ml-70 mr-70">
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </div>
     <Footer />
 
   </body>

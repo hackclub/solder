@@ -1,25 +1,14 @@
+---
+const { title, sections } = Astro.props;
+---
 
 <div class="h-screen w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col">
     <div class="p-4 text-2xl font-bold border-b border-gray-700">
-      Tutorial
+	{ title }
     </div>
     <nav class="flex-1 overflow-y-auto">
       <ul class="space-y-2 p-4">
-        <li>
-          <a href="#kicad" class="block p-2 rounded hover:bg-gray-700">
-            KiCAD Guide
-          </a>
-        </li>
-        <li>
-           <a href="#getting-started" class="block p-2 rounded hover:bg-gray-700">
-               Basic Components
-           </a>
-        </li>
-        <li>
-          <a href="#" class="block p-2 rounded hover:bg-gray-700">
-            Examples
-          </a>
-        </li>
+	      { sections.map((header) => <li style={"padding-left: " + (header.depth-1) + "rem"}><a href={"#" + header.slug}>{header.text}</a></li>)}
       </ul>
     </nav>
     <div class="p-4 border-t border-gray-700">

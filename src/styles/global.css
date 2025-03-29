@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
 html {
     scroll-behavior: smooth;
@@ -125,4 +125,13 @@ th, td {
 th {
     background-color: #3498db;
     color: white;
+}
+
+img {
+    max-width: 30rem;
+}
+
+p {
+    margin-top: 1.15rem;
+    margin-bottom: 1.15rem;
 }
