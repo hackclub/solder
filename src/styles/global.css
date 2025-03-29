@@ -131,12 +131,7 @@ img {
     max-width: 30rem;
 }
 
-p {
+.tutorial-page p {
     margin-top: 1.15rem;
     margin-bottom: 1.15rem;
-}
-
-.index-page p{
-    margin-top: 0;
-    margin-bottom: 0;
 }
