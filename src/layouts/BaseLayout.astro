@@ -19,12 +19,11 @@ const majorHeadings = headings.filter(header => header.depth < 4);
 
     <Sidebar title={frontmatter.title} sections={majorHeadings} class="h-dvh" style="z-index: 5;"/>
 
-    <div class="ml-70 mb-4 relative" style="z-index: 0; margin-right: 10%;" transition:animate={fade({duration: "0.3s"})}}>
-      <h1>{frontmatter.title}</h1>
+    <div class="ml-80 mb-4 relative" style="z-index: 0; margin-right: 10%;" transition:animate={fade({duration: "0.3s"})}}>
+      <h1 class="">{frontmatter.title}</h1>
+      <hr class="h-0.5 bg-black opacity-30" />
       <slot />
     </div>
-
-    <Footer />
 
   </body>
 </html>

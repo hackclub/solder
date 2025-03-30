@@ -7,7 +7,7 @@ order: 3
 
 Hey you! Are you a leader of a Hack Club, whether it's in your school or someplace else? 
 
-# Run a solder workshop!
+### Run a solder workshop!
 
 But why?
 - Solder is built with beginners in mind - but you could also make a lot of advanced, cool, wacky things with simple parts!
