@@ -3,12 +3,14 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 body {
     font-family: 'Archivo', sans-serif;
     background-image: url("/bg2.svg");
     background-repeat: repeat;
+    margin: 0;
 }
 
 .bobbing {
