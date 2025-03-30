@@ -8,7 +8,7 @@ const { frontmatter, headings } = Astro.props;
 const majorHeadings = headings.filter(header => header.depth < 4);
 
 const isChrome = navigator.userAgent.includes("Chrome") &&
-                       navigator.vendor && navigator.vendor.includes("Google Inc");
+navigator.vendor && navigator.vendor.includes("Google Inc");
 ---
 <html lang="en" transition:animate="none">
   <head>
@@ -25,7 +25,9 @@ const isChrome = navigator.userAgent.includes("Chrome") &&
     <div class="ml-80 mb-4 relative" style="z-index: 0; margin-right: 10%;" transition:animate={isChrome ? fade({duration: "0.3s"}) : "none"}>
       <h1 class="">{frontmatter.title}</h1>
       <hr class="h-0.5 bg-black opacity-30" />
-      <slot />
+      <div class="markdown">
+          <slot style={markdownStyle} class={markdownClass} />
+      </div>
     </div>
 
   </body>

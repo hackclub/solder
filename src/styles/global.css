@@ -136,3 +136,31 @@ img {
 hr {
     margin-bottom: 2rem;
 }
+
+div.markdown a {
+	color: red;
+}
+
+div.markdown li {
+	display: list-item;
+}
+
+div.markdown ul {
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+div.markdown ol {
+	display: block;
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
