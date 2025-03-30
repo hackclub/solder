@@ -6,8 +6,8 @@ const hoverColor = "";
 
 <div id="toc-container" class="toc-container">
 <nav class="flex-1 overflow-y-auto text-base">
-<div style="font-weight: normal; text-decoration: none;">
-      <ul class="space-y-2 p-1" style="font-weight: normal; text-decoration: none;">
+<div class="text-md" style="font-weight: normal; text-decoration: none;">
+      <ul class="space-y-1 p-1" style="font-weight: normal; text-decoration: none;">
 	      { sections.map((header) => 
 	      <li style={"padding-left:" + (header.depth-1) + "rem"} class={textColor + " sidebar-item hover:" + hoverColor}>
 		      <a href={"#" + header.slug} class="sidebar-link hover:text-blue-300" data-slug={header.slug}>{header.text}</a>

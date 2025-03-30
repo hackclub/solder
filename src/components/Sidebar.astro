@@ -47,7 +47,7 @@ const collapse = {
 		{postList.map(post => { 
 		const isActive = `/${post.slug}` === currentPath;
 		return (
-		  <li class="text-xl post">
+		  <li class="text-md post">
 		      <a href={`/${post.slug}`} class = {"hover:bg-gray-700 p-[6px] px-4 rounded-lg flex flex-col "+(isActive ? 'active' : '')}>{post.title}</a>
 		      {isActive && <div id="toc-wrapper" class="expand" transition:animate={collapse}><TOC title={title} sections={sections} /></div>}
 		  </li>
