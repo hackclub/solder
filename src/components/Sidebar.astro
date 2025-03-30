@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
-const { title, sections } = Astro.props;
+import TOC from './TOC.astro';
 const posts = import.meta.glob('../pages/posts/*.md', { eager: true });
+const { title = "NAN", sections = [] } = Astro.props;
 
 // To array
 const postList = Object.entries(posts).map(([path, post]: [string, any]) => {
@@ -26,8 +27,9 @@ const currentPath = Astro.url.pathname;
 		{postList.map(post => { 
 		const isActive = `/posts/${post.slug}` === currentPath;
 		return (
-		  <li class={"text-xl " + (isActive ? 'active' : '')}>
-		      <a href={`/posts/${post.slug}`}>{post.title}</a>
+		  <li class="text-xl post">
+		      <a href={`/posts/${post.slug}`} class = {"hover:font-bold "+(isActive ? 'active' : '')}>{post.title}</a>
+		      {isActive && <TOC title={title} sections={sections} />}
 		  </li>
 		)})}
       </ul>
