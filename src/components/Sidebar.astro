@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import TOC from './TOC.astro';
+import { fade } from "astro:transitions";
 const posts = import.meta.glob('../pages/posts/*.md', { eager: true });
 const { title = "NAN", sections = [] } = Astro.props;
 
@@ -19,7 +20,27 @@ const postList = Object.entries(posts).map(([path, post]: [string, any]) => {
 postList.sort((a, b) => a.order - b.order);
 
 const currentPath = Astro.url.pathname;
+
+const anim = {
+  old: {
+    name: "collapse",
+    duration: "0.5s",
+    easing: "ease-in",
+    direction: "reverse",
+  },
+  new: {
+    name: "collapse",
+    duration: "0.5s",
+    easing: "ease-in-out",
+  },
+};
+
+const collapse = {
+  forwards: anim,
+  backwards: anim,
+};
 ---
+
 <div class="h-screen w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col">
     <nav class="flex-1 overflow-y-auto">
 	<h2 class="space-y-2 pt-4 pl-8">Contents:</h2>
@@ -29,7 +50,7 @@ const currentPath = Astro.url.pathname;
 		return (
 		  <li class="text-xl post">
 		      <a href={`/posts/${post.slug}`} class = {"hover:bg-gray-700 p-[6px] px-4 rounded-lg flex flex-col "+(isActive ? 'active' : '')}>{post.title}</a>
-		      {isActive && <TOC title={title} sections={sections} />}
+		      {isActive && <div id="toc-wrapper" class="expand" transition:animate={collapse}><TOC title={title} sections={sections} /></div>}
 		  </li>
 		)})}
       </ul>
