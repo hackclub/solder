@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../layouts/BaseLayout.astro
 title: 'Basic components + how to use them'
 show: False
 ---

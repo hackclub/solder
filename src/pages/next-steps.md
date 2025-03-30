@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../layouts/BaseLayout.astro
 title: 'Next Steps'
 show: True
 order: 2
