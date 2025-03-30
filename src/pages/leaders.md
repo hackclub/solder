@@ -2,7 +2,7 @@
 layout: ../layouts/BaseLayout.astro
 title: 'Leaders'
 show: True
-order: 3
+order: 4
 ---
 
 Hey you! Are you a leader of a Hack Club, whether it's in your school or someplace else? 

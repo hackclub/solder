@@ -2,7 +2,7 @@
 layout: ../layouts/BaseLayout.astro
 title: 'Next Steps'
 show: True
-order: 4
+order: 5
 ---
 
 If you're on this page, you've probably made a PCB, and have just recieved your solder kit. Congrats!
