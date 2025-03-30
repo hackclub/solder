@@ -24,13 +24,13 @@ const currentPath = Astro.url.pathname;
 const anim = {
   old: {
     name: "collapse",
-    duration: "0.5s",
+    duration: "0.3s",
     easing: "ease-in",
     direction: "reverse",
   },
   new: {
     name: "collapse",
-    duration: "0.5s",
+    duration: "0.3s",
     easing: "ease-in-out",
   },
 };
@@ -43,7 +43,7 @@ const collapse = {
 
 <div class="h-screen w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col">
     <nav class="flex-1 overflow-y-auto">
-	<h2 class="space-y-2 pt-4 pl-8">Contents:</h2>
+  <img src="/animelogo.png" class="w-full p-5"/>
 	<ul class="pl-4 pr-4" style={"padding-left: 1rem;"} >
 		{postList.map(post => { 
 		const isActive = `/posts/${post.slug}` === currentPath;
