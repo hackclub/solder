@@ -22,13 +22,13 @@ const currentPath = Astro.url.pathname;
 ---
 <div class="h-screen w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col">
     <nav class="flex-1 overflow-y-auto">
-	<h2 class="space-y-2 pt-4 pl-4">Contents:</h2>
-	<ul class="space-y-2 pl-4" style={"padding-left: 1rem;"} >
+	<h2 class="space-y-2 pt-4 pl-8">Contents:</h2>
+	<ul class="pl-4 pr-4" style={"padding-left: 1rem;"} >
 		{postList.map(post => { 
 		const isActive = `/posts/${post.slug}` === currentPath;
 		return (
 		  <li class="text-xl post">
-		      <a href={`/posts/${post.slug}`} class = {"hover:font-bold "+(isActive ? 'active' : '')}>{post.title}</a>
+		      <a href={`/posts/${post.slug}`} class = {"hover:bg-gray-700 p-[6px] px-4 rounded-lg flex flex-col "+(isActive ? 'active' : '')}>{post.title}</a>
 		      {isActive && <TOC title={title} sections={sections} />}
 		  </li>
 		)})}
@@ -44,6 +44,6 @@ const currentPath = Astro.url.pathname;
 <style>
 .active {
   font-weight: bold;
-  text-decoration: underline;
+  background-color: var(--color-gray-700);
 }
 </style>

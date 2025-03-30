@@ -1,7 +1,7 @@
 ---
 const { title = "NAN", sections = [] } = Astro.props;
-const textColor = "text-white";
-const hoverColor = "font-bold";
+const textColor = "text-gray-400";
+const hoverColor = "";
 ---
 
 <nav class="flex-1 overflow-y-auto text-base">
@@ -9,14 +9,14 @@ const hoverColor = "font-bold";
       <ul class="space-y-2 p-1" style="font-weight: normal; text-decoration: none;">
 	      { sections.map((header) => 
 	      <li style={"padding-left:" + (header.depth-1) + "rem"} class={textColor + " sidebar-item hover:" + hoverColor}>
-		      <a href={"#" + header.slug} class="sidebar-link hover:font-bold" data-slug={header.slug}>{header.text}</a>
+		      <a href={"#" + header.slug} class="sidebar-link hover:text-blue-300" data-slug={header.slug}>{header.text}</a>
 	      </li>)}
       </ul>
 </div>
 </nav>
 
 <script client:load>
-  const activeColor = "text-gray-100";
+  const activeColor = "text-blue-200";
   // Highlight the current section we are in interactivly
   document.addEventListener('DOMContentLoaded', () => {
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
