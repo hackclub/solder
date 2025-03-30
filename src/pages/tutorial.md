@@ -17,7 +17,7 @@ In the beginner world, there is always a common ground, called VSS, GND or 0V. I
 ### Resistors
 One of the fundamental parts of electrical design is resistors, which are used to limit the current flow. They are characterized by it's resistance, given by the formula R = V / I, which is also known as Ohm’s law.
 
-If you put two resistors series, their resistance combine: It is equivalent to one resistor that has the resistance of the sum of the two original resistors. When two or more resistors are parallel, their total resistance is given by the formula Rtotal = 1/R1 + 1/R2 + 1/R3 + ...
+If you put two resistors series, their resistance combine: It is equivalent to one resistor that has the resistance of the sum of the two original resistors. When two or more resistors are parallel, their total resistance is given by the formula 1/Rtotal = 1/R1 + 1/R2 + 1/R3 + ...
 
 They are used in places where we want to stop components from using up too much electricity, and getting hot then burning itself
 
