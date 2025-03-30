@@ -138,7 +138,11 @@ hr {
 }
 
 div.markdown a {
-	color: red;
+	color: #609AFF;
+}
+
+div.markdown a:hover {
+	color: #ff607a;
 }
 
 div.markdown li {
@@ -163,4 +167,8 @@ div.markdown ol {
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 40px;
+}
+
+div.markdown p:last-child {
+    padding-bottom: 5rem; 
 }
