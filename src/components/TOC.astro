@@ -17,29 +17,6 @@ const hoverColor = "";
 </nav>
 </div>
 
-<style>
-.toc-container {
-  transform-origin: top;
-  opacity: 1;
-  transform: scaleY(1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.toc-collapsing {
-  opacity: 0;
-  transform: scaleY(0);
-}
-
-.toc-expanding {
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-.sidebar-link.active {
-  font-weight: bold;
-}
-</style>
-
 <script client:load>
   const activeColor = "text-blue-200";
   // Highlight the current section we are in interactivly
