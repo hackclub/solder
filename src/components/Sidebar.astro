@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import TOC from './TOC.astro';
-import { fade } from "astro:transitions";
 const posts = import.meta.glob('../pages/*.md', { eager: true });
 const { title = "NAN", sections = [] } = Astro.props;
 
