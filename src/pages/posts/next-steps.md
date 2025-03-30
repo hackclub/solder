@@ -1,6 +1,8 @@
 ---
 layout: ../../layouts/BaseLayout.astro
-pageTitle: 'Next Steps'
+title: 'Next Steps'
+show: True
+order: 2
 ---
 
 # Now what?

@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/BaseLayout.astro
 title: 'Basic components + how to use them'
-description: 'This is the first post of my new Astro blog.'
+show: False
 ---
 
 # heading fdjskflds 

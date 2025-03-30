@@ -1,6 +1,8 @@
 ---
-layout: ../layouts/BaseLayout.astro
+layout: ../../layouts/BaseLayout.astro
 title: "Tutorial"
+show: True
+order: 1
 ---
 
 Note: In this tutorial we talk about the movement of electrons to simplify the conecept, but in real life they actually move in the opposite direction than what we say here.

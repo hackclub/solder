@@ -1,0 +1,57 @@
+---
+const { title = "NAN", sections = [] } = Astro.props;
+const textColor = "text-gray-800";
+const hoverColor = "text-blue-800";
+---
+
+<div class="h-screen w-64 fixed top-15 right-0 flex flex-col">
+    <nav class="flex-1 overflow-y-auto">
+      <ul class="space-y-2 p-4">
+	      { sections.map((header) => 
+	      <li style={"padding-left:" + (header.depth-1) + "rem"} class={textColor + "sidebar-item hover:" + hoverColor}>
+		      <a href={"#" + header.slug} class="sidebar-link" data-slug={header.slug}>{header.text}</a>
+	      </li>)}
+      </ul>
+    </nav>
+</div>
+
+<script client:load>
+  const activeColor = "text-blue-800";
+  // Highlight the current section we are in interactivly
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const sections = Array.from(sidebarLinks).map(link => document.getElementById(link.dataset.slug)).filter(el => el);
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        const slug = entry.target.id;
+        const sidebarLink = document.querySelector('.sidebar-link[data-slug="' + slug + '"]');
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(link => link.classList.remove('active'));
+          sidebarLinks.forEach(link => link.classList.remove(activeColor));
+          sidebarLink.classList.add('active');
+	  sidebarLink.classList.add(activeColor);
+	  console.log(slug)
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    sections.forEach(section => {
+      if (section) observer.observe(section);
+    });
+  });
+</script>
+
+<style>
+  /* style for active sidebar link */
+  .sidebar-link.active {
+    font-weight: bold;
+  }
+</style>
