@@ -5,31 +5,50 @@ show: True
 order: 2
 ---
 
-You first need to create a new project: Go to File &gt; New Project and create it. After that, click on this button to open then schematic editor:
+For this tutorial we are just going to make two button controlled LEDs. There are two parts of making this: first the schematic, then the PCB!
 
-![](/tutorial/schematic.png)
-A schematic is basically a diagram of the electrical circuit that expresses what parts you use and how they are connected. Note that they don't convey irl positioning - draw your part anywhere you want!
+### Keyboard shortcuts
 
-For this tutorial we are just going to make three button controlled LEDs. Firstly, we need a battery to power the device, so press A and search "Battery_cell", click OK and click anywhere on the schematic to place the component. When you are placing the component, you and also press R to rotate it! We are using CR2032s as batteries, so on the + side of the terminal, there will be 3V and on the opposite side, it will be ground.
+KiCad has a lot of keyboard shortcuts that are useful to know! Here's a list:
+- a: add a component
+- p: place an item (electric and ground)
+- r: rotate item
+- m: pick up item and move it
+- g: grab the item and move it, including attached wires
+- w: begin drawing a wire connection
+- delete: delete item
 
-Add a few more components in the same way: Two LEDs named "LED" and two resistors named "R". Your schematic should look like this:
-![](/tutorial/schematic-nc.png)
+### Making the Schematic
 
-The presence of LEDs are obvious, since we need them to be able to emit light. As the name of the name "Light Emitting Diodes" implies, their behaviour is the same as normal diodes, they just emit light at the same time.
+A schematic is basically a diagram of the electrical circuit that expresses what parts you use and how they are connected via wires.
 
-The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black)
+Note _where_ you place your parts in the schematic doesn't convey IRL positioning - place it where it's convenient! 
 
-For the values of the resistors, it is 220ohms!
+Click here to open the schematic editor:
+
+![](/tutorial/sch1.png)
+
+For making three button controlled LEDs, we need to add our parts in! In KiCad, press A to _add_ a part. A pop-up should appear; first, search for LED, then press _ok_ to add! Place it anywhere.
+
+![](/tutorial/sch2.png)
+
+Repeat this for adding a battery (Battery_cell) to power the device, and two resistors (R) for the LEDs. Press R to rotate items. It should look something like this when you're done!
+
+![](/tutorial/sch3.png)
+
+We're using CR2032s as batteries, which are 3V! So, on the + side of the terminal, it will be 3V, and on the opposite side, it will be ground. 
+
+When connected to the battery, the LEDs (called Light Emitting Diodes) will emmit light! The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black.) The resistors we're using are 220ohms! 
 
 Time to add wires! Wires are basically paths that electricity will flow through. We would like to wire the positive end of our battery (the end where there is a +: Where electricity departs) up to the back of the LEDs. Then at the we wire the output of our LEDs up to the resistors. (You can change the order of the LED and resistor!) After that we will want to wire the other end of the reistor to the ground of the battery.
 
-To do this, hover your mouse over one end of a symbol, and press W to start wirering. Drag the wire around, if you want to make a turn, press W again to anchor your wire onto the current spot, and continue dragging. When you are at your desired destination symbol's end, press W to place. You should have something like this:
+To do this, hover your mouse over one end of a symbol, and press W to start wiring. Drag the wire around and wire your parts together. You should have something like this:
 
-![](/tutorial/schematic-wc.png)
+![](/tutorial/sch4.png)
 
-Great job! Now it's the time to associate footprints to the symbols. Press the following button on the top of KiCAD:
+Great job! Now it's the time to associate footprints to the symbols. Footprints define the what the copper connections on the physical PCB look like. Press the following button on the top bar of KiCad:
 
-![](/tutorial/link.png)
+![](/tutorial/sch5.png)
 
 You should be presented with a table of all the components you have placed. Press a symbol's row, find the corresponding footprint using the following table, search it up in the top bar and double click the right entry on the right hand side. Repeat this for each component.
 
@@ -45,8 +64,15 @@ You should be presented with a table of all the components you have placed. Pres
 | R_Potentiometer | Potentiometer_Bourns_3386F_Vertical |
 | Conn_01xN_Pin | PinHeader_1xN_P2.54mm_Vertical (Replace N!) |
 
-At the end, you should have something like this:
-![](/tutorial/linked.png)
+![](/tutorial/sch6.png)
+
+After that, click ok! Your schematic should look the same, but now the footprints are connected.
+
+Save the schematic - you're done with it! Now, onto the PCB!
+
+### Making the PCB
+
+______
 
 Now go back to the starting KiCAD window, and press this button to open the PCB editor:
 ![](/tutorial/pcb.png)
