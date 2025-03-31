@@ -5,13 +5,23 @@ show: True
 order: 3
 ---
 
+### Create a Github Repo!
+
+**Include a README.md with:**
+- Description of your project
+- Bill of materials (What parts did you use? Have a list of those items, plus their quantities!)
+- Screenshots of the schematic, PCB, and 3D view of your board!
+
+**Also include in the repo:**
+- Gerber and drill files of your board!
+
 ### Already on the Hack Club Slack?
 
 Head on over to #solder-ships! 
 
 Post what you made - _ship_ it by sharing it with the world!
 
-**In the post, include:**
+**In the slack message, include:**
 - Github repo link - include a README in that repo, with all your KiCad files!
 - Screenshot of your schematic, PCB, and 3d view of the PCB
 - Write description explaning what your circuit does!
