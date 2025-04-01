@@ -5,8 +5,6 @@ show: True
 order: 2
 ---
 
-Note: In this tutorial we talk about the movement of electrons to simplify the conecept, but in real life they actually move in the opposite direction than what we say here.
-
 In electronics, we deal with two main units: voltage (V), which is the difference of potential between two points (think of the force pushing electrons to go from one point to another), while current (I) is the amount of electrons passing through a given point.
 
 In the beginner world, there is always a common ground, called VSS, GND or 0V. It's a point where there is no potential, so all the electrons want to go there. Thus if you connect a point that has 5V to GND, electrons will naturally flow from 5V to GND.
@@ -14,11 +12,14 @@ In the beginner world, there is always a common ground, called VSS, GND or 0V. I
 Now onto the components! All these come in the kit.
 
 ### Resistors
-One of the fundamental parts of electrical design is resistors, which are used to limit the current flow. They are characterized by it's resistance, given by the formula R = V / I, which is also known as Ohm’s law.
 
-If you put two resistors series, their resistance combine: It is equivalent to one resistor that has the resistance of the sum of the two original resistors. When two or more resistors are parallel, their total resistance is given by the formula 1/Rtotal = 1/R1 + 1/R2 + 1/R3 + ...
+- [SparkFun explainer](https://learn.sparkfun.com/tutorials/resistors/all)
 
-They are used in places where we want to stop components from using up too much electricity, and getting hot then burning itself
+One of the fundamental parts of electrical design is resistors, which are used to limit the current flow. They are used in places where we want to stop components from using up too much electricity, and getting hot then burning itself. Each resistor has a certain resistance value, measured by ohms (Ω). 
+
+They are characterized by it's resistance, given by the formula R = V / I, which is also known as Ohm’s law.
+
+If you put two resistors in series, their resistance combine: It is equivalent to one resistor that has the resistance of the sum of the two original resistors. When two or more resistors are parallel, their total resistance is given by the formula 1/Rtotal = 1/R1 + 1/R2 + 1/R3 + ...
 
 ### Capacitors</h4>
 Capacitors are like tiny batteries, they charge up when you apply a voltage across them, and their internal voltage increase. And discharge when the outside voltage is lower then their internal voltage.

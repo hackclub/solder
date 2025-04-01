@@ -26,7 +26,7 @@ const pageTitle = "Home Page";
 
 		<div class="flex flex-col justify-center items-center min-h-screen">
 			<img src="/orph.svg" class="w-40 md:w-70 absolute -top-3 md:top-0 left-4 md:left-6"/>
-			<a href="/tutorial"><button class="p-2 px-8 md:px-10 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl absolute top-4 right-4 iwmd:right-6 text-white font-bold">tutorial</button></a>
+			<a href="/start"><button class="p-2 px-8 md:px-10 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl absolute top-4 right-4 iwmd:right-6 text-white font-bold">tutorial</button></a>
 
 			<div class="hidden md:block">
 				<div class="group">
@@ -59,8 +59,8 @@ const pageTitle = "Home Page";
 
 			<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center mx-5 text-white mt-6 md:mt-3 text-lg font-semibold">
 				<a href="#about"><button class="p-2 px-6 bg-[#FFAD60] rounded-3xl mb-2 md:mb-0 md:mr-2">how this works</button></a>
-				<a href="tutorial"><button class="p-2 px-6 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl mb-2 md:mb-0 md:mr-2">read the tutorial</button></a>
-				<a href="/submit" target="_blank" rel="noopenner noreferrer"><button class="p-2 px-6 bg-[#609AFF] rounded-3xl">how to submit</button></a>
+				<a href="start"><button class="p-2 px-6 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl mb-2 md:mb-0 md:mr-2">read the tutorial</button></a>
+				<a href="submit" target="_blank" rel="noopenner noreferrer"><button class="p-2 px-6 bg-[#609AFF] rounded-3xl">how to submit</button></a>
 			</div>
 
 			<img src="/arrows.svg" class="mt-8 md:mt-20 mb-0 bobbing"/>
@@ -73,7 +73,7 @@ const pageTitle = "Home Page";
 		<div class="bg-[#FFAD60] p-8 opacity-90 flex flex-wrap justify-center items-center" id="about">
 			<p class="m-2">1. Learn about electrical components</p>
 			<p class="m-2">2. Design your PCB</p>
-			<p class="m-2">3. Submit on GitHub</p>
+			<p class="m-2">3. Submit what you made</p>
 			<p class="m-2">4. We'll ship you your kit</p>
 			<p class="m-2">5. Solder your project together</p>
 		</div>
@@ -181,16 +181,10 @@ const pageTitle = "Home Page";
 					content="to hold the battery!" 
 					image="/hardware/cell.png"
 				/>
-				<Card 
-					quantity="1"
-					title="solder + iron" 
-					content="to solder your board with!" 
-					image=""
-				/>
 			</div>
 
 			<p class="mt-8 font-bold text-2xl bg-gradient-to-r from-[#FF60A8] to-[#ff607a] inline-block text-transparent bg-clip-text mx-5 text-center">... and a grant to manufacture the printed circuit board you designed!</p>
-
+			<p class="bg-gradient-to-r from-[#FF60A8] to-[#ff607a] inline-block text-transparent bg-clip-text mx-5 text-center"><i>Plus, a soldering iron (and solder) if you don't have one!</i></p>
 
 			{/* 
 			<div class="text-center text-[#FF7A60] mt-8">
@@ -261,7 +255,13 @@ const pageTitle = "Home Page";
 				</ul>
 			</div>
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8">
-				<p class="text-xl">insert drawing here</p>
+				<p class="text-2xl font-bold">You could be making...</p>
+				<ul class="list-disc ml-8 mt-2">
+					<li>something to go on a keychain - maybe a cute cat?</li>
+					<li>a name badge - for hackathons, or even conventions :3</li>
+					<li>some cool logic gates with transistors</li>
+					<li>a fidget toy!</li>
+				</ul>
 			</div>	
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8">
 				<p class="text-2xl font-bold">Club leader at your school?</p>
@@ -277,8 +277,8 @@ const pageTitle = "Home Page";
 		</div>
 
 		<div class="flex flex-col justify-center items-center text-center text-xl">
-			<a href="/tutorial"><button class="p-2 px-6 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl text-white font-semibold">Start learning now!</button></a>
-			<a href="https://github.com/hackclub/solder" target="_blank" rel="noopenner noreferrer"><button class="p-2 px-6 bg-[#609AFF] rounded-3xl text-white font-semibold mt-2">Ready to submit?</button></a>
+			<a href="start"><button class="p-2 px-6 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl text-white font-semibold">Start learning now!</button></a>
+			<a href="submit"><button class="p-2 px-6 bg-[#609AFF] rounded-3xl text-white font-semibold mt-2">Ready to submit?</button></a>
 		</div>
 
 		<div class="mt-10">

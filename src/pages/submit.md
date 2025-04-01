@@ -5,7 +5,7 @@ show: True
 order: 3
 ---
 
-### Create a Github Repo!
+### 1. Create a Github Repo!
 
 **Include a README.md with:**
 - Description of your project
@@ -19,7 +19,7 @@ order: 3
 [Here's an example of a Github repo](https://github.com/cheyao/Open555) that @cyao made of Open555: a 555 IC, entirely with THT transistors!
 ![](/tutorial/submit1.png)
 
-### Ship it on Slack!
+### 2. Ship it on Slack!
 
 If you're not already on the Hack Club Slack, join here: https://hackclub.com/slack/!!
 
