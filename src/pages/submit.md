@@ -11,9 +11,13 @@ order: 3
 - Description of your project
 - Bill of materials (What parts did you use? Have a list of those items, plus their quantities!)
 - Screenshots of the schematic, PCB, and 3D view of your board!
+- Your slack username (for verification) 
 
 **Also include in the repo:**
 - Gerber and drill files of your board!
+
+[Here's an example of a Github repo](https://github.com/cheyao/Open555) that @cyao made of Open555: a 555 IC, entirely with THT transistors!
+![](/tutorial/submit1.png)
 
 ### Ship it on Slack!
 
