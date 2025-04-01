@@ -5,7 +5,7 @@ show: True
 order: 4
 ---
 
-Hey you! Are you a leader of a Hack Club, whether it's in your school or someplace else? 
+Hey you! Are you a leader of a Hack Club? 
 
 ### Run a solder workshop!
 
@@ -17,3 +17,5 @@ But why?
 - I'll send you a super secret special limited edition exclusive pin :eyes: 
 - I'll give you all the support you'll need!
 - Only prerequisite is to have made an accepted submission yourself 
+
+To start, message @acon in slack!
