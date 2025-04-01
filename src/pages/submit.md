@@ -15,11 +15,13 @@ order: 3
 **Also include in the repo:**
 - Gerber and drill files of your board!
 
-### Already on the Hack Club Slack?
+### Ship it on Slack!
+
+If you're not already on the Hack Club Slack, join here: https://hackclub.com/slack/!!
 
 Head on over to #solder-ships! 
 
-Post what you made - _ship_ it by sharing it with the world!
+Post what you made - _ship_ it by sharing it with the world, via a slack message!
 
 **In the slack message, include:**
 - Github repo link - include a README in that repo, with all your KiCad files!
@@ -37,15 +39,13 @@ Anyone will be free to respond with feedback in thread.
 
 After either @acon or @cyao (on Slack) reacts with the  ✅  emoji, it's approved! We'll DM you with a shipping form to fill out to get your kit :D
 
-### Here from a club (or classroom) workshop?
+---
 
-Your club leader will give you a form to fill out!
+### Here from a workshop?
 
-If you're in the Slack, you should also post it in #solder-ships. You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
+Your club leader (or teacher) will give you a form to fill out!
 
-### Not on the Slack yet, and not from a club?
-
-Go join!
+If you're in the Slack, you should still post it in #solder-ships. You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
 
 ### Club leader?
 
