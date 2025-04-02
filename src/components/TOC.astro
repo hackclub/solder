@@ -18,11 +18,12 @@ const hoverColor = "";
 </div>
 
 <script client:load>
+function load() {
   const activeColor = "text-blue-200";
+
   // Highlight the current section we are in interactivly
-  document.addEventListener('DOMContentLoaded', () => {
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
-    const sections = Array.from(sidebarLinks).map(link => document.getElementById(link.dataset.slug)).filter(el => el);
+    const sections = Array.from(sidebarLinks).map(link => document.getElementById(link.dataset.slug)).filter(el => el    );
 
     const observerCallback = (entries) => {
       const visibleEntries = entries.filter(entry => entry.isIntersecting);
@@ -49,5 +50,37 @@ const hoverColor = "";
     sections.forEach(section => {
       if (section) observer.observe(section);
     });
-  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  load();
+});
+
+(() => {
+    let oldPushState = history.pushState;
+    history.pushState = function pushState() {
+        let ret = oldPushState.apply(this, arguments);
+        window.dispatchEvent(new Event('pushstate'));
+        window.dispatchEvent(new Event('locationchange'));
+        return ret;
+    };
+
+    let oldReplaceState = history.replaceState;
+    history.replaceState = function replaceState() {
+        let ret = oldReplaceState.apply(this, arguments);
+        window.dispatchEvent(new Event('replacestate'));
+        window.dispatchEvent(new Event('locationchange'));
+        return ret;
+    };
+
+    window.addEventListener('popstate', () => {
+        window.dispatchEvent(new Event('locationchange'));
+    });
+})();
+
+window.addEventListener('locationchange', function () {
+    load();
+})
+
+load();
 </script>
