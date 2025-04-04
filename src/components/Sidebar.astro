@@ -18,7 +18,7 @@ const postList = Object.entries(posts).map(([path, post]: [string, any]) => {
 
 postList.sort((a, b) => a.order - b.order);
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replaceAll('/', '');
 
 // The animation
 const anim = {
@@ -41,15 +41,15 @@ const collapse = {
 };
 ---
 
-<div class="h-screen w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0">
+<div class="w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0">
     <nav class="flex-1 overflow-y-auto">
   <img src="/animelogo.png" class="w-full p-5"/>
 	<ul class="pl-4 pr-4" style={"padding-left: 1rem;"} >
 		{postList.map(post => { 
-		const isActive = `/${post.slug}` === currentPath;
+		const isActive = `${post.slug}` === currentPath;
 		return (
 		  <li class="text-md post p-1">
-		      <a href={`/${post.slug}`} class = {"hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col "+(isActive ? 'active' : '')}>{post.title}</a>
+			  <a href={`/${post.slug}`} class={"hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col "+ (isActive ? 'active' : '')}>{post.title}</a>
 		      {isActive && <div id="toc-wrapper" transition:animate={collapse}>
 			      <TOC title={title} sections={sections} />
 		      </div>}
