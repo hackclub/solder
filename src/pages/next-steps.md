@@ -18,6 +18,9 @@ What you need:
 Video tutorials:
 - https://www.youtube.com/watch?v=3jAw41LRBxU
 
+### After assembly
+
+Test that it's working, and send a video to #solder!! 
 
 ### More things to do
 
