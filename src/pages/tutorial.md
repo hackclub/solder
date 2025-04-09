@@ -99,8 +99,6 @@ I highly recommend drawing a more detailed SVG (ie: Figma), then import it in by
 
 ![](/tutorial/pcb5.png)
 
-____
-
 Great job! The only thing left is wiring the board. Click the wire symbol on the right sidebar, then click on any component pad. It should dim the entire screen, and show you which direction you need to go with a thin blue line and highlight the destination:
 
 ![](/tutorial/pcb6.png)

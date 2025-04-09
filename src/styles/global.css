@@ -78,12 +78,13 @@ h2 {
 }
 h3 { 
     display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
+    font-size: 1.4em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
+    color:#ff607a;
 }
 h4 { 
     display: block;

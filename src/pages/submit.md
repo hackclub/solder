@@ -23,14 +23,14 @@ order: 3
 
 If you're not already on the Hack Club Slack, join here: https://hackclub.com/slack/!!
 
-Head on over to #solder-ships! 
+Head on over to [#solder-ships](https://hackclub.slack.com/archives/C08N2CN8E2C)! 
 
 Post what you made - _ship_ it by sharing it with the world, via a slack message!
 
 **In the slack message, include:**
 - Github repo link 
 - Screenshot of your schematic, PCB, and 3d view of the PCB
-- Write description explaning what your circuit does!
+- Description explaining what your circuit does!
 
 **Other things you could include:**
 - Why did you decide to make that specific design?
