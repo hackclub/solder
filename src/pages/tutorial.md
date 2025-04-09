@@ -124,6 +124,8 @@ Search up "Fabrication Toolkit" and install it. Now go back to the PCB editor, y
 
 ![](/tutorial/fabrication-toolkit.png)
 
+[To be added: how to add art/text to your pcb]
+
 Contgrats on making a PCB! You should find a .zip of your project in the "production" subfolder of your project's directory - thats the file that you need to send to the manufaturers! All that's left is to ship your project :D 
 
 Make a Github repo, and add all your files in!

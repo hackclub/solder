@@ -28,7 +28,7 @@ Head on over to #solder-ships!
 Post what you made - _ship_ it by sharing it with the world, via a slack message!
 
 **In the slack message, include:**
-- Github repo link - include a README in that repo, with all your KiCad files!
+- Github repo link 
 - Screenshot of your schematic, PCB, and 3d view of the PCB
 - Write description explaning what your circuit does!
 
@@ -38,6 +38,9 @@ Post what you made - _ship_ it by sharing it with the world, via a slack message
 - What did you learn while making it?
 - Advice for others?
 - Anything else you want to mention!
+
+[Here's an example of a ship post](https://hackclub.slack.com/archives/C08N2CN8E2C/p1744198018400559) that @cyao made!
+![](/tutorial/submit2.png)
 
 Anyone will be free to respond with feedback in thread. 
 
