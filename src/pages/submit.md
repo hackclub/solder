@@ -33,6 +33,7 @@ Post what you made - _ship_ it by sharing it with the world, via a slack message
 - Description explaining what your circuit does!
 
 **Other things you could include:**
+- Let me know if this is your first PCB / time using KiCad!
 - Why did you decide to make that specific design?
 - Was there a particularily challenging part?
 - What did you learn while making it?
