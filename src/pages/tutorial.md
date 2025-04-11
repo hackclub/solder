@@ -124,9 +124,9 @@ Be sure to set the layer as "F.Silkscreen"! After that, it's time for some graph
 
 When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. Now look at the beatiful drawing you have on your PCB!
 
-[To be added: how to add art/text to your pcb]
+![](/tutorial/art.png)
 
-If it's too big or too little, go back to the converter window, then change the output size to the desired dimensions and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
+If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
 ![](/tutorial/pcb9.png)
 
