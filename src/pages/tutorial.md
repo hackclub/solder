@@ -120,11 +120,11 @@ If there are, please resolve them! Otherwise, it's time to pretty up the PCB! Wi
 
 Be sure to set the layer as "F.Silkscreen"! After that, it's time for some graphics. Grab a picture on google or draw one yourself, then open up Image Converter in KiCAD. Load a source image, and drag the black white threshold slider on the right to tweak the output.
 
-[TODO: Image Converter picture]
+![](/tutorial/art.png)
 
 When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. Now look at the beatiful drawing you have on your PCB!
 
-![](/tutorial/art.png)
+[TODO: Picture]
 
 If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
