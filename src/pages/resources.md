@@ -12,6 +12,7 @@ Youtube:
 - [Ben Eater](https://www.youtube.com/c/BenEater) - lots of good transistor-transistor logic stuff
 - [EEVblog](https://www.youtube.com/@EEVblog) - great electrical engineering channel w/ all kinds of content
 - [PACE soldering guide](https://www.youtube.com/watch?v=vIT4ra6Mo0s&list=PL926EC0F1F93C1837) - learn how to solder
+- [Afrotechmods](https://www.youtube.com/@Afrotechmods) - super good electronics introduction channel
 
 Web:
 - [Falstad Circuit Simulator](https://www.falstad.com/circuit/circuitjs.html) - simulate your circuits
