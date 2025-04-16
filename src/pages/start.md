@@ -11,6 +11,14 @@ If you're not already on the Hack Club Slack, get in here: https://hackclub.com/
 
 When you finish your project, you'll also need to post it in the [#solder-ships] channel. Join it and check out what others are making!
 
+### What's a PCB?
+
+PCB stands for printed circuit board! 
+
+It's a board that links all the electronics together via copper wires that run through it. Think of it as a breadboard - but the wires are built into it and all you need to do is _solder_ your components on.
+
+See also: [SparkFun's article](https://learn.sparkfun.com/tutorials/pcb-basics/all) explaining PCBs!
+
 ### KiCad Quick Start
 
 Complete beginner? No worries!

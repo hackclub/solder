@@ -14,7 +14,7 @@ But why?
 - After you run the initial workshop and your members ship their designs, I'll ship you a giant box with everyone's kits, together! You can then run another meeting with just soldering the kits, together.
 - Fast review + fulfillment times! 
 - I'll send you a super secret special limited edition exclusive pin :eyes: 
-- I'll give you all the support you'll need!
-- Only prerequisite is to have made an accepted submission yourself 
+
+The only prerequisite: make an accepted submission yourself first!
 
 To start, message @acon in slack!
