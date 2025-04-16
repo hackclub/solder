@@ -13,7 +13,7 @@ But why?
 - Solder is built with beginners in mind - but you could also make a lot of advanced, cool, wacky things with simple parts!
 - After you run the initial workshop and your members ship their designs, I'll ship you a giant box with everyone's kits, together! You can then run another meeting with just soldering the kits, together.
 - Fast review + fulfillment times! 
-- I'll send you a super secret special limited edition exclusive pin :eyes: 
+- I'll send you a super secret special limited edition exclusive sticker :eyes: 
 
 The only prerequisite: make an accepted submission yourself first!
 
