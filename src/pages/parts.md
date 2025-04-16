@@ -37,10 +37,12 @@ Vibrates when current is passed through! Use potentiometers or resistors to limi
 Potentiometers have 3 terminals, and act as a variable resistor. By connecting the two ends, they act as a constant resistor, but the pin in the middle is special, it has variable resistance from one end of the potentiometers to the middle pin. If you want adjustable resistance, just wire up one end of the potentiometers, and use the middle pin as output.
 
 ### Transistors</h4>
-Transistors are more complex, they are divided into NPN and PNP types, and they have three pins, called emmiter, collector and gate.
+A transistor is a device that allows you to use change in voltage to switch things on and off. They are kind of like a valve, but instead of controlling water they control electricity. They are divided into NPN and PNP types, and they have three pins, called emmiter, collector and gate.
 
 ![](https://hc-cdn.hel1.your-objectstorage.com/s/v3/a381d42773bcd403a74388d6688b6665c933234b_image.png)
 
-In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically a control circuit. If it’s voltage is the voltage on the emitter, the transister won’t allow electrons to pass. Inversly, if it’s the voltage on the collector, the transistor will allow electrons to pass.
+In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically the switch. If the voltage on the gate is higher then on the emitter, the transister will allow electricity to pass. Inversly, if the the voltage gate is lower or equal to the emitter, the transistor will not allow electrons to pass.
 
-The PNP transistor is the inverse of a NPN transistor: The base needs to be at a lower voltage than the emitter for electricity to flow. When the base is at the same voltage as the emitter, it doesn't allow any electricity to pass through
+But the switches are not perfect, electricity will also conduct from the gate to the emitter, so if you don't put a resistor on the gate, you might cause a short circuit. The current allowed to pass through the gate is also important. Each amp of current that can pass through the gate will generally allow ~100 amps of electricity to pass from the collector to the emitter. Calculate the current on teh gate with ohms law! Also don't make your circuit depend too much on this, the 100 will change to 60 or 140 depending on temperature!
+
+The PNP transistor is the inverse of a NPN transistor: The base needs to be at a lower voltage than the emitter for electricity to flow. When the base is at the same voltage as the emitter, it doesn't allow any electricity to pass through.

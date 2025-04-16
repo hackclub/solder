@@ -114,7 +114,19 @@ Good work! You're almost done with the PCB. Let's run the DRC to make sure the P
 
 ![](/tutorial/pcb8.png)
 
-If there are, please resolve them! Otherwise we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
+If there are, please resolve them! Otherwise, it's time to pretty up the PCB! With the _Draw Text_ button on the right of the screen you can add some text to the PCB:
+
+[TODO: Add text screen]
+
+Be sure to set the layer as "F.Silkscreen"! After that, it's time for some graphics. Grab a picture on google or draw one yourself, then open up Image Converter in KiCAD. Load a source image, and drag the black white threshold slider on the right to tweak the output.
+
+![](/tutorial/art.png)
+
+When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. Now look at the beatiful drawing you have on your PCB!
+
+[TODO: Picture]
+
+If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
 ![](/tutorial/pcb9.png)
 
@@ -122,12 +134,10 @@ Search up "Fabrication Toolkit" and install it. Now go back to the PCB editor, y
 
 ![](/tutorial/fabrication-toolkit.png)
 
-[To be added: how to add art/text to your pcb]
-
 Contgrats on making a PCB! You should find a .zip of your project in the "production" subfolder of your project's directory - thats the file that you need to send to the manufaturers! All that's left is to ship your project :D 
 
 Make a Github repo, and add all your files in!
 
-One last step before submission - please take a screenshot of your schematic, PCB, and 3D view, then put it inside your README.md of your project! (Create a README if you don't have one.)
+One last step before submission - please take a screenshot of your schematic, PCB, and 3D view (Press Control+3), then put it inside your README.md of your project! (Create a README if you don't have one.)
 
 Now, head on to the How to Submit to go through the submission flow!
