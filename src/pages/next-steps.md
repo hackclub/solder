@@ -27,7 +27,6 @@ Test that it's working, and send a video to #solder!!
 Hack Club has a ton more amazing programs for you to learn + get resources from.
 
 Here are some of my favourites:
-- [OnBoard](https://hackclub.com/onboard/): make a PCB, get a $100 grant to manufactuer it!
 - [Hackpad](https://hackpad.hackclub.com/): make a keyboard, get a grant to build the keyboard!
 - Find the full list of programs [here](https://ysws.hackclub.com/)!
 
