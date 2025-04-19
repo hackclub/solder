@@ -46,7 +46,13 @@ To do this, hover your mouse over one end of a symbol, and press W to start wiri
 
 ![](/tutorial/sch4.png)
 
-Great job! Now it's the time to associate footprints to the symbols. Footprints define the what the copper connections on the physical PCB look like. Press the following button on the top bar of KiCad:
+Great job! Now it's the time to associate footprints to the symbols. Footprints define the what the copper connections on the physical PCB look like. There are two big types of component footprints: THT and SMD.
+
+![](/tutorial/tht-vs-smd.png)
+
+THT components need a hole on the PCB to be mounted (Normally a yellow circle on kicad), they will also have iron legs sticking out of the component, they are easy to solder. SMD components doesn't need a hole on the PCB to be mounted, are typically smaller and super hard to solder. You generally don't want to solder these by hand.
+
+We will be using the THT footprints. Press the following button on the top bar of KiCad:
 
 ![](/tutorial/sch5.png)
 
@@ -90,7 +96,6 @@ Click on a component and press M to drag them around, and press R to rotate. If 
 
 ![](/tutorial/pcb4.png)
 
-
 Remember to not block where the battery slides in with parts!
 
 Now, go on the right menu bar, and select "Edge.Cuts". This is the outline of your board! Using the polygon tool, you can draw an outline for your board. I'm going for a cat-like shape!
@@ -116,15 +121,15 @@ Good work! You're almost done with the PCB. Let's run the DRC to make sure the P
 
 If there are, please resolve them! Otherwise, it's time to pretty up the PCB! With the _Draw Text_ button on the right of the screen you can add some text to the PCB:
 
-[TODO: Add text screen]
+![](/tutorial/add-text.png)
 
 Be sure to set the layer as "F.Silkscreen"! After that, it's time for some graphics. Grab a picture on google or draw one yourself, then open up Image Converter in KiCAD. Load a source image, and drag the black white threshold slider on the right to tweak the output.
 
 ![](/tutorial/art.png)
 
-When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. Now look at the beatiful drawing you have on your PCB!
+When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. If you see "G***" written on your drawing, just click on it and press delete. Now look at the beatiful drawing you have on your PCB!
 
-[TODO: Picture]
+![](/tutorial/silkscreen.png)
 
 If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
