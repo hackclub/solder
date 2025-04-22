@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import '../styles/tutorial.css';
-import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
 import { ClientRouter, fade } from "astro:transitions";
 const { frontmatter, headings } = Astro.props;
@@ -29,7 +28,6 @@ navigator.vendor && navigator.vendor.includes("Google Inc");
           <slot style={markdownStyle} class={markdownClass} />
       </div>
     </div>
-
   </body>
 </html>
 
@@ -47,6 +45,13 @@ navigator.vendor && navigator.vendor.includes("Google Inc");
     transform-origin: top;
     transform: scaleY(1);
     max-height: 100vh;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #141F2E;
+    color: white;
   }
 }
 </style>
