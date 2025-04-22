@@ -28,3 +28,7 @@ Select _Draw Filled Zones_ on the right, and press on one end of your board to s
 After that's done, press B to fill your zone, and voila! Your ground pour is done, and you won't need to route your ground.
 
 Just one last thing: Press Control+Shift+X and place some vias all around your ground pour to conntect both sides of your board.
+
+## A keychain hole
+
+If you want to add a keychain hole to the PCB, press control+shift+x to place a via, then press E and enter 5 for via hole, and 5.5 for via diameter! Now you have a plated hole :D
