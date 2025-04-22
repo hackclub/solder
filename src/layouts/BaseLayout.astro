@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "../styles/tutorial.css";
 import Sidebar from "../components/Sidebar.astro";
 import { ClientRouter, fade } from "astro:transitions";
+import ThemeToggle from "../components/ThemeToggle.astro";
 const { frontmatter, headings } = Astro.props;
 const majorHeadings = headings.filter((header) => header.depth < 4);
 
@@ -21,6 +22,10 @@ const isChrome =
         <title>{frontmatter.title}</title>
     </head>
     <body class="h-screen">
+        <div class="fixed top-4 right-4 z-10">
+            <ThemeToggle />
+        </div>
+
         <Sidebar
             title={frontmatter.title}
             sections={majorHeadings}
@@ -56,13 +61,6 @@ const isChrome =
             transform-origin: top;
             transform: scaleY(1);
             max-height: 100vh;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #141f2e;
-            color: white;
         }
     }
 </style>

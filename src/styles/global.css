@@ -13,6 +13,41 @@ body {
   margin: 0;
 }
 
+html[data-switcherloaded="true"] body {
+  transition:
+    background-color 0.5s ease,
+    background-image 0.5s ease,
+    color 0.5s ease;
+}
+
+/* Default theme is light, .dark class is applied for dark mode */
+html.dark body {
+  background-color: #141f2e;
+  background-image: url("/bg3.svg");
+  color: white;
+}
+
+/* Keep the media query as a fallback when no preference is saved */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) body {
+    background-color: #141f2e;
+    background-image: url("/bg3.svg");
+    color: white;
+  }
+
+  html:not(.light) .about-solder {
+    color: #e5aeae;
+  }
+}
+
+.about-solder {
+  color: #ff6860;
+}
+
+html:not(.light) .about-solder {
+  color: #ff9d9d;
+}
+
 .bobbing {
   animation: bobbing 1.5s infinite ease-in-out;
 }
