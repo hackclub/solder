@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BaseLayout.astro
-title: 'Getting Started'
+title: "Getting Started"
 show: True
 order: 1
 ---
@@ -13,7 +13,7 @@ When you finish your project, you'll also need to post it in the [#solder-ships]
 
 ### What's a PCB?
 
-PCB stands for printed circuit board! 
+PCB stands for printed circuit board!
 
 It's a board that links all the electronics together via copper wires that run through it. Think of it as a breadboard - but the wires are built into it and all you need to do is _solder_ your components on.
 

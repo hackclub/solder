@@ -1,175 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 html {
-    scroll-behavior: smooth;
-    margin: 0;
+  scroll-behavior: smooth;
+  margin: 0;
 }
 
 body {
-    font-family: 'Archivo', sans-serif;
-    background-image: url("/bg2.svg");
-    background-repeat: repeat;
-    margin: 0;
+  font-family: "Archivo", sans-serif;
+  background-image: url("/bg2.svg");
+  background-repeat: repeat;
+  margin: 0;
 }
 
 .bobbing {
-    animation: bobbing 1.5s infinite ease-in-out;
+  animation: bobbing 1.5s infinite ease-in-out;
 }
 
 /* Define the bobbing animation */
 @keyframes bobbing {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 button {
-    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 }
 
 button:hover {
-    transform: scale(1.1); /* Slightly enlarge the button */
+  transform: scale(1.1); /* Slightly enlarge the button */
 }
 
 @keyframes pop {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.03);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
 }
 
 .hover\:animate-pop:hover {
-    animation: pop 0.3s ease-in-out;
+  animation: pop 0.3s ease-in-out;
 }
 
 .popping {
-    transition: transform 0.16s ease-in-out;
+  transition: transform 0.16s ease-in-out;
 }
 
 .popping:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
-
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-top: 1em;
-    margin-bottom: 0em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+  display: block;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-h3 { 
-    display: block;
-    font-size: 1.4em;
-    margin-top: 1.5em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-    color:#ff607a;
+h3 {
+  display: block;
+  font-size: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: #ff607a;
 }
-h4 { 
-    display: block;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-h5 { 
-    display: block;
-    font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-h6 { 
-    display: block;
-    font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 table {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 20px 0;
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 th {
-    background-color: #3498db;
-    color: white;
+  background-color: #3498db;
+  color: white;
 }
 
 img {
-    max-width: 45rem;
+  max-width: 45rem;
 }
 
 hr {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 div.markdown a {
-	color: #609AFF;
+  color: #609aff;
 }
 
 div.markdown a:hover {
-	color: #ff607a;
+  color: #ff607a;
 }
 
 div.markdown li {
-	display: list-item;
+  display: list-item;
 }
 
 div.markdown ul {
-	display: block;
-	list-style-type: disc;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 40px;
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
 }
 
 div.markdown ol {
-	display: block;
-	list-style-type: decimal;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 40px;
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
 }
 
 div.markdown p:last-child {
-    padding-bottom: 5rem; 
+  padding-bottom: 5rem;
 }
