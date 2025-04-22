@@ -131,7 +131,11 @@ When your satisfied, check _Footprint_ as the output format, then click _Export 
 
 ![](/tutorial/silkscreen.png)
 
-If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. Now we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
+If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. 
+
+If you want to add a keychain hole to the PCB, press control+shift+x to place a via, then press E and enter 5 for via hole, and 5.5 for via diameter! Now you have a plated hole :D
+
+Lastly, we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
 ![](/tutorial/pcb9.png)
 
