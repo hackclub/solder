@@ -10,6 +10,7 @@ For this tutorial we are just going to make two button controlled LEDs. There ar
 ### Keyboard shortcuts
 
 KiCad has a lot of keyboard shortcuts that are useful to know! Here's a list:
+
 - a: add a component
 - p: place an item (electric and ground)
 - r: rotate item
@@ -22,7 +23,7 @@ KiCad has a lot of keyboard shortcuts that are useful to know! Here's a list:
 
 A schematic is basically a diagram of the electrical circuit that expresses what parts you use and how they are connected via wires.
 
-Note _where_ you place your parts in the schematic doesn't convey IRL positioning - place it where it's convenient! 
+Note _where_ you place your parts in the schematic doesn't convey IRL positioning - place it where it's convenient!
 
 Click here to open the schematic editor:
 
@@ -36,9 +37,9 @@ Repeat this for adding a battery (Battery_cell) to power the device, and two res
 
 ![](/tutorial/sch3.png)
 
-We're using CR2032s as batteries, which are 3V! So, on the + side of the terminal, it will be 3V, and on the opposite side, it will be ground. 
+We're using CR2032s as batteries, which are 3V! So, on the + side of the terminal, it will be 3V, and on the opposite side, it will be ground.
 
-When connected to the battery, the LEDs (called Light Emitting Diodes) will emmit light! The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black.) The resistors we're using are 220ohms! 
+When connected to the battery, the LEDs (called Light Emitting Diodes) will emmit light! The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black.) The resistors we're using are 220ohms!
 
 Time to add wires! Wires are basically paths that electricity will flow through. We would like to wire the positive end of our battery (the end where there is a +: Where electricity departs) up to the back of the LEDs. Then at the we wire the output of our LEDs up to the resistors. (You can change the order of the LED and resistor!) After that we will want to wire the other end of the reistor to the ground of the battery.
 
@@ -58,17 +59,17 @@ We will be using the THT footprints. Press the following button on the top bar o
 
 You should be presented with a table of all the components you have placed. Press a symbol's row, find the corresponding footprint using the following table, search it up in the top bar and double click the right entry on the right hand side. Repeat this for each component.
 
-| Symbol | Footprint |
-| ------ | --------- |
-| R | R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal |
-| LED | LED_D5.0mm |
-| Button | SW_PUSH_6mm |
-| Battery | BatteryHolder_Keystone_3034_1x20mm |
-| NPN | TO-92L_HandSolder |
-| PNP | TO-92L_HandSolder |
-| C | CP_Radial_D8.0mm_P5.00mm |
-| R_Potentiometer | Potentiometer_Vishay_T73YP_Vertical |
-| Conn_01xN_Pin | PinHeader_1xN_P2.54mm_Vertical (Replace N!) |
+| Symbol          | Footprint                                        |
+| --------------- | ------------------------------------------------ |
+| R               | R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal |
+| LED             | LED_D5.0mm                                       |
+| Button          | SW_PUSH_6mm                                      |
+| Battery         | BatteryHolder_Keystone_3034_1x20mm               |
+| NPN             | TO-92L_HandSolder                                |
+| PNP             | TO-92L_HandSolder                                |
+| C               | CP_Radial_D8.0mm_P5.00mm                         |
+| R_Potentiometer | Potentiometer_Vishay_T73YP_Vertical              |
+| Conn_01xN_Pin   | PinHeader_1xN_P2.54mm_Vertical (Replace N!)      |
 
 ![](/tutorial/sch6.png)
 
@@ -100,7 +101,7 @@ Remember to not block where the battery slides in with parts!
 
 Now, go on the right menu bar, and select "Edge.Cuts". This is the outline of your board! Using the polygon tool, you can draw an outline for your board. I'm going for a cat-like shape!
 
-I highly recommend drawing a more detailed SVG (ie: Figma), then import it in by File > Import > Graphics. 
+I highly recommend drawing a more detailed SVG (ie: Figma), then import it in by File > Import > Graphics.
 
 ![](/tutorial/pcb5.png)
 
@@ -127,11 +128,11 @@ Be sure to set the layer as "F.Silkscreen"! After that, it's time for some graph
 
 ![](/tutorial/art.png)
 
-When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. If you see "G***" written on your drawing, just click on it and press delete. Now look at the beatiful drawing you have on your PCB!
+When your satisfied, check _Footprint_ as the output format, then click _Export to Clipboard_ and paste in the PCB window. If you see "G\*\*\*" written on your drawing, just click on it and press delete. Now look at the beatiful drawing you have on your PCB!
 
 ![](/tutorial/silkscreen.png)
 
-If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again. 
+If it's too big or too little, press M and use the ruler tool to measure the desired size. Now go back to the converter window, then change the output size to the measured size and copy then paste again.
 
 Lastly, we only need to generate the final fabrication file! Go back to the main KiCAD window, and click "Plugin and Content Manager".
 
@@ -141,7 +142,7 @@ Search up "Fabrication Toolkit" and install it. Now go back to the PCB editor, y
 
 ![](/tutorial/fabrication-toolkit.png)
 
-Contgrats on making a PCB! You should find a .zip of your project in the "production" subfolder of your project's directory - thats the file that you need to send to the manufaturers! All that's left is to ship your project :D 
+Contgrats on making a PCB! You should find a .zip of your project in the "production" subfolder of your project's directory - thats the file that you need to send to the manufaturers! All that's left is to ship your project :D
 
 Make a Github repo, and add all your files in!
 

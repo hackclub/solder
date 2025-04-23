@@ -1,11 +1,11 @@
 ---
 import "../styles/global.css";
 
-import Footer from '../components/Footer.astro';
-import Card from '../components/Card.astro';
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 
-
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 const pageTitle = "Home Page";
 ---
 
@@ -27,7 +27,10 @@ const pageTitle = "Home Page";
 
 		<div class="flex flex-col justify-center items-center min-h-screen">
 			<img src="/orph.svg" class="w-40 md:w-70 absolute -top-3 md:top-0 left-4 md:left-6"/>
-			<a href="/start"><button class="p-2 px-8 md:px-10 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl absolute top-4 right-4 iwmd:right-6 text-white font-bold">tutorial</button></a>
+			<div class="flex gap-2 absolute top-4 right-4 md:right-6">
+				<ThemeToggle />
+				<a href="/start"><button class="p-2 px-8 md:px-10 bg-gradient-to-r from-[#FF60A8] to-[#ff607a] rounded-3xl text-white font-bold">tutorial</button></a>
+			</div>
 
 			<div class="hidden md:block">
 				<div class="group">
@@ -232,7 +235,7 @@ const pageTitle = "Home Page";
 
 		</div>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 lg:px-24 2xl:px-44 text-[#ff6860] mt-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 lg:px-24 2xl:px-44 about-solder mt-8">
 			{/* 
 			<div class="border-dashed border-4 rounded-md border-[#FFAD60] p-8 text-[#FFAD60] bg-linear-to-r from-[#fff4eb] to-[#fff0eb]">
 				<p class="text-xl">how this works</p>

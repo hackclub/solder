@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BaseLayout.astro
-title: 'How to Submit'
+title: "How to Submit"
 show: True
 order: 3
 ---
@@ -8,12 +8,14 @@ order: 3
 ### 1. Create a Github Repo!
 
 **Include a README.md with:**
+
 - Description of your project
 - Bill of materials (What parts did you use? Have a list of those items, plus their quantities!)
 - Screenshots of the schematic, PCB, and 3D view of your board!
-- Your slack username (for verification) 
+- Your slack username (for verification)
 
 **Also include in the repo:**
+
 - Gerber and drill files of your board!
 
 [Here's an example of a Github repo](https://github.com/cheyao/Open555) that @cyao made of Open555: a 555 IC, entirely with THT transistors!
@@ -23,16 +25,18 @@ order: 3
 
 If you're not already on the Hack Club Slack, join here: https://hackclub.com/slack/!!
 
-Head on over to [#solder-ships](https://hackclub.slack.com/archives/C08N2CN8E2C)! 
+Head on over to [#solder-ships](https://hackclub.slack.com/archives/C08N2CN8E2C)!
 
 Post what you made - _ship_ it by sharing it with the world, via a slack message!
 
 **In the slack message, include:**
-- Github repo link 
+
+- Github repo link
 - Screenshot of your schematic, PCB, and 3d view of the PCB
 - Description explaining what your circuit does!
 
 **Other things you could include:**
+
 - Let me know if this is your first PCB / time using KiCad!
 - Why did you decide to make that specific design?
 - Was there a particularily challenging part?
@@ -43,9 +47,9 @@ Post what you made - _ship_ it by sharing it with the world, via a slack message
 [Here's an example of a ship post](https://hackclub.slack.com/archives/C08N2CN8E2C/p1744198018400559) that @cyao made!
 ![](/tutorial/submit2.png)
 
-Anyone will be free to respond with feedback in thread. 
+Anyone will be free to respond with feedback in thread.
 
-After either @acon or @cyao (on Slack) reacts with the  ✅  emoji, it's approved! We'll DM you with a shipping form to fill out to get your kit :D
+After either @acon or @cyao (on Slack) reacts with the ✅ emoji, it's approved! We'll DM you with a shipping form to fill out to get your kit :D
 
 ---
 
@@ -60,5 +64,3 @@ If you're in the Slack, you should still post it in #solder-ships. You'll get gr
 DM @acon on slack to get a form for your members to fill out to ship, instead of going through the Slack flow!
 
 Post a picture of your club meeting doing Solder in #solder-ships to get a special item shipped to you :D
-
-
