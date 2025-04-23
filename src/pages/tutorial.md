@@ -91,6 +91,10 @@ You should now have parts under your mouse, click anywhere to place them.
 
 ![](/tutorial/pcb3.png)
 
+If you don't see any parts, but there are blue lines, expand the "Layer Display Options" menu on the right side and check "Normal".
+
+![](/tutorial/invisible.png)
+
 This PCB is a design of your IRL circuit board, so this time the placement of components will matter - where you place them is where they turn out on the final product, so think carefully where they should go!
 
 Click on a component and press M to drag them around, and press R to rotate. If you want to place a component on the back side, press F to flip. Here is the placement I'm going with:
