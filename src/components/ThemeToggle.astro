@@ -102,11 +102,8 @@
     // Execute immediately to prevent theme flashing
     const initTheme = async () => {
         const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-        ).matches;
 
-        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        if (savedTheme === "dark") {
             document.querySelector("html")?.classList.add("dark");
         }
 
