@@ -211,3 +211,5 @@ div.markdown ol {
 div.markdown p:last-child {
   padding-bottom: 5rem;
 }
+
+img[alt=part] { width: 200px; }

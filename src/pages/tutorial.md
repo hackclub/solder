@@ -69,7 +69,8 @@ You should be presented with a table of all the components you have placed. Pres
 | PNP             | TO-92L_HandSolder                                |
 | C               | CP_Radial_D8.0mm_P5.00mm                         |
 | R_Potentiometer | Potentiometer_Vishay_T73YP_Vertical              |
-| Conn_01xN_Pin   | PinHeader_1xN_P2.54mm_Vertical (Replace N!)      |
+| Conn_01xN_Pin   | PinHeader_1xN_P2.54mm_Vertical (**Replace N!**)  |
+| Motor_DC        | PinHeader_1x2_P2.54mm_Vertical                   |
 
 ![](/tutorial/sch6.png)
 
