@@ -98,13 +98,19 @@
     }
 </style>
 
-<script>
+<script client:load>
     // Execute immediately to prevent theme flashing
     const initTheme = async () => {
         const savedTheme = localStorage.getItem("theme");
 
         if (savedTheme === "dark") {
             document.querySelector("html")?.classList.add("dark");
+            document.querySelector("html")?.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.querySelector("html")?.classList.remove("dark");
+            document.querySelector("html")?.classList.add("light");
+            localStorage.setItem("theme", "light");
         }
 
         await new Promise((resolve) => setTimeout(resolve, 10));
@@ -137,6 +143,7 @@
         if (savedTheme) {
             setTheme(savedTheme);
         } else {
+            localStorage.setItem("theme", "light");
             setTheme("light");
         }
 
@@ -149,5 +156,40 @@
         });
 
         await initTheme();
+    });
+
+    window.addEventListener("locationchange", function () {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+            if (theme === "dark") {
+                document.querySelector("html")?.classList.add("dark");
+                document.querySelector("html")?.classList.remove("light");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.querySelector("html")?.classList.remove("dark");
+                document.querySelector("html")?.classList.add("light");
+                localStorage.setItem("theme", "light");
+            }
+        };
+
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            localStorage.setItem("theme", "light");
+            setTheme("light");
+        }
+
+        // Toggle theme when button is clicked
+        themeToggle?.addEventListener("click", () => {
+            const isDark = document
+                .querySelector("html")
+                ?.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+        });
     });
 </script>
