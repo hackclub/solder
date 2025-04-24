@@ -7,6 +7,12 @@ order: 2
 
 For this tutorial we are just going to make two button controlled LEDs. There are two parts of making this: first the schematic, then the PCB!
 
+The software we are going to use is KiCAD, an free and open source software that is super easy to use, but you will need to install it. Can't or don't want to install an application? Jump to the [EasyEDA guide](#easyeda-tutorial)!
+
+## KiCAD Tutorial
+
+Firstly, [download KiCAD from their website](https://www.kicad.org/)!
+
 ### Keyboard shortcuts
 
 KiCad has a lot of keyboard shortcuts that are useful to know! Here's a list:
@@ -154,3 +160,44 @@ Make a Github repo, and add all your files in!
 One last step before submission - please take a screenshot of your schematic, PCB, and 3D view (Press Control+3), then put it inside your README.md of your project! (Create a README if you don't have one.)
 
 Now, head on to the How to Submit to go through the submission flow!
+
+## EasyEDA Tutorial
+
+EasyEDA is a free web based PCB design software, go start using it [here](https://easyeda.com/)! Click design online, then Std edition to start.
+
+### Making the Schematic
+
+A schematic is basically a diagram of the electrical circuit that expresses what parts you use and how they are connected via wires.
+
+Note _where_ you place your parts in the schematic doesn't convey IRL positioning - place it where it's convenient!
+
+Click here to open the schematic editor:
+
+![](/tutorial/easyeda-make-project.png)
+
+For making three button controlled LEDs, we need to add our parts in! In EasyEDA, go open the Common Library on the left side, find a resistor, and click on the triangle on it's bottom right. Select "R-Axial-0.6" and place two of them!
+
+![](/tutorial/easyeda-add-resistor.png)
+
+Repeat this for adding a two LEDs, this time selecting "LED-TH-5mm". Press R to rotate items. 
+
+Now we need to add our battery holder: Click on the Library button on the left hand side, select LCSC and then search for C964834. Now click place.
+
+![](/tutorial/easyeda-add-bat.png)
+
+Your schematic should look something like this when you're done!
+
+![](/tutorial/easyeda-sch.png)
+
+We're using CR2032s as batteries, which are 3V! So, on the + side of the terminal (Side with 1 written on it), it will be 3V, and on the opposite side, it will be ground.
+
+When connected to the battery, the LEDs (called Light Emitting Diodes) will emmit light! The use of resistors is essential - they prevent too much electricity from passing through the LEDs. Without a resistor, the hungry LEDs would gobble up as much electricity as possible, and end up too hot and burn itself. (No, there won't be any fires, they just make a small pop and turn black.) The resistors we're using are 220ohms!
+
+Time to add wires! Wires are basically paths that electricity will flow through. We would like to wire the positive end of our battery (the end where there is a +: Where electricity departs) up to the back of the LEDs. Then at the we wire the output of our LEDs up to the resistors. (You can change the order of the LED and resistor!) After that we will want to wire the other end of the reistor to the ground of the battery.
+
+To do this, hover your mouse over one end of a symbol, press W and click on it to start wiring. Drag the wire around and wire your parts together. You should have something like this:
+
+![](/tutorial/easyeda-sch1.png)
+
+Save the schematic - you're done with it! Now, onto the PCB!
+
