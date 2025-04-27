@@ -179,7 +179,7 @@ For making three button controlled LEDs, we need to add our parts in! In EasyEDA
 
 ![](/tutorial/easyeda-add-resistor.png)
 
-Repeat this for adding a two LEDs, this time selecting "LED-TH-5mm". Press R to rotate items. 
+Repeat this for adding a two LEDs, this time selecting "LED-TH-5mm". Press R to rotate items. If you want to add buttons, select "K4-6×6_TH" in the switch/key part. And for the transistors, find the transistor symbol and select one of the TO92 options from the drop down menu.
 
 Now we need to add our battery holder: Click on the Library button on the left hand side, select LCSC and then search for C964834. Now click place.
 
