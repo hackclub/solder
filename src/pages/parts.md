@@ -55,7 +55,7 @@ Potentiometers have 3 terminals, and act as a variable resistor. By connecting t
 
 ### Transistors
 
-A transistor is a device that allows you to use change in voltage to switch things on and off. They are kind of like a valve, but instead of controlling water they control electricity. They are divided into NPN and PNP types, and they have three pins, called emmiter, collector and gate.
+A transistor is a device that allows you to use change in voltage to switch things on and off. They are kind of like a valve, but instead of controlling water they control electricity. They are divided into NPN and PNP types, and they have three pins, called emmiter, collector and base.
 
 ![part](https://hc-cdn.hel1.your-objectstorage.com/s/v3/a381d42773bcd403a74388d6688b6665c933234b_image.png)
 
