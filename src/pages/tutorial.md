@@ -77,6 +77,7 @@ You should be presented with a table of all the components you have placed. Pres
 | R_Potentiometer | Potentiometer_Vishay_T73YP_Vertical              |
 | Conn_01xN_Pin   | PinHeader_1xN_P2.54mm_Vertical (**Replace N!**)  |
 | Motor_DC        | PinHeader_1x2_P2.54mm_Vertical                   |
+| R_Photo         | R_LDR_5.1x4.3mm_P3.4mm_Vertical                  |
 
 ![](/tutorial/sch6.png)
 
