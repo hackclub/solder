@@ -69,7 +69,7 @@ You should be presented with a table of all the components you have placed. Pres
 | --------------- | ------------------------------------------------ |
 | R               | R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal |
 | LED             | LED_D5.0mm                                       |
-| Button          | SW_PUSH_6mm                                      |
+| SW_Push         | SW_PUSH_6mm                                      |
 | Battery         | BatteryHolder_Keystone_3034_1x20mm               |
 | NPN             | TO-92L_HandSolder                                |
 | PNP             | TO-92L_HandSolder                                |
