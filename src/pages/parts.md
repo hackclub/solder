@@ -25,7 +25,7 @@ If you put two resistors in series, their resistance combine: It is equivalent t
 
 ### Photoresistor
 
-Photoresistors are basically the same as resistors, but thir resistance decreases when they are subject to light, and increases when they are in the dark.
+Photoresistors are basically the same as resistors, but their resistance decreases when they are subject to light, and increases when they are in the dark.
 
 ![part](/tutorial/photoresistor.png)
 
@@ -61,7 +61,7 @@ A transistor is a device that allows you to use change in voltage to switch thin
 
 In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically the switch. If the voltage on the gate is higher then on the emitter, the transister will allow electricity to pass. Inversly, if the the voltage gate is lower or equal to the emitter, the transistor will not allow electrons to pass.
 
-But the switches are not perfect, electricity will also conduct from the gate to the emitter, so if you don't put a resistor on the gate, you might cause a short circuit. The current allowed to pass through the gate is also important. Each amp of current that can pass through the gate will generally allow ~100 amps of electricity to pass from the collector to the emitter. Calculate the current on teh gate with ohms law! Also don't make your circuit depend too much on this, the 100 will change to 60 or 140 depending on temperature!
+But the switches are not perfect, electricity will also conduct from the gate to the emitter, so if you don't put a resistor on the gate, you might cause a short circuit. The current allowed to pass through the gate is also important. Each amp of current that can pass through the gate will generally allow ~100 amps of electricity to pass from the collector to the emitter. Calculate the current on the gate with ohms law! Also don't make your circuit depend too much on this, the 100 will change to 60 or 140 depending on temperature!
 
 The PNP transistor is the inverse of a NPN transistor: The base needs to be at a lower voltage than the emitter for electricity to flow. When the base is at the same voltage as the emitter, it doesn't allow any electricity to pass through.
 
