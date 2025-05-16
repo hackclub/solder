@@ -17,4 +17,4 @@ But why?
 
 The only prerequisite: make an accepted submission yourself first!
 
-To start, message @acon in slack!
+To start, message @acon in slack, and join the #solder-leaders channel!
