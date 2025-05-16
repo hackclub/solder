@@ -1,72 +1,90 @@
 ---
-import '../styles/global.css';
-import TOC from './TOC.astro';
-const posts = import.meta.glob('../pages/*.md', { eager: true });
+import "../styles/global.css";
+import TOC from "./TOC.astro";
+const posts = import.meta.glob("../pages/*.md", { eager: true });
 const { title = "NAN", sections = [] } = Astro.props;
 
 // To array
-const postList = Object.entries(posts).map(([path, post]: [string, any]) => {
-  const slug = path
-    .replace('../pages/', '')
-    .replace(/\.md$/, '');
+const postList = Object.entries(posts)
+	.map(([path, post]: [string, any]) => {
+		const slug = path.replace("../pages/", "").replace(/\.md$/, "");
 
-  return {
-    slug, 
-    ...post.frontmatter,
-  };
-}).filter((post) => post.show);
+		return {
+			slug,
+			...post.frontmatter,
+		};
+	})
+	.filter((post) => post.show);
 
 postList.sort((a, b) => a.order - b.order);
 
-const currentPath = Astro.url.pathname.replaceAll('/', '');
+const currentPath = Astro.url.pathname.replaceAll("/", "");
 
 // The animation
 const anim = {
-  old: {
-    name: "collapse",
-    duration: "0.3s",
-    easing: "ease-in",
-    direction: "reverse",
-  },
-  new: {
-    name: "collapse",
-    duration: "0.3s",
-    easing: "ease-in-out",
-  },
+	old: {
+		name: "collapse",
+		duration: "0.3s",
+		easing: "ease-in",
+		direction: "reverse",
+	},
+	new: {
+		name: "collapse",
+		duration: "0.3s",
+		easing: "ease-in-out",
+	},
 };
 
 const collapse = {
-  forwards: anim,
-  backwards: anim,
+	forwards: anim,
+	backwards: anim,
 };
 ---
 
-<div class="w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0">
+<div
+    class="w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0"
+>
     <nav class="flex-1 overflow-y-auto">
-  <img src="/animelogo.png" class="w-full p-5"/>
-	<ul class="pl-4 pr-4" style={"padding-left: 1rem;"} >
-		{postList.map(post => { 
-		const isActive = `${post.slug}` === currentPath;
-		return (
-		  <li class="text-md post p-1">
-			  <a href={`/${post.slug}`} class={"hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col "+ (isActive ? 'active' : '')}>{post.title}</a>
-		      {isActive && <div id="toc-wrapper" transition:animate={collapse}>
-			      <TOC title={title} sections={sections} />
-		      </div>}
-		  </li>
-		)})}
-      </ul>
+        <img src="/animelogo.png" class="w-full p-5" />
+        <ul class="pl-4 pr-4" style={"padding-left: 1rem;"}>
+            {
+                postList.map((post) => {
+                    const isActive = `${post.slug}` === currentPath;
+                    return (
+                        <li class="text-md post p-1">
+                            <a
+                                href={`/${post.slug}`}
+                                class={
+                                    "hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col " +
+                                    (isActive ? "active" : "")
+                                }
+                            >
+                                {post.title}
+                            </a>
+                            {isActive && (
+                                <div
+                                    id="toc-wrapper"
+                                    transition:animate={collapse}
+                                >
+                                    <TOC title={title} sections={sections} />
+                                </div>
+                            )}
+                        </li>
+                    );
+                })
+            }
+        </ul>
     </nav>
     <div class="p-4 border-t border-gray-700">
-      <a href="/" class="block text-sm text-gray-400 hover:text-white">
-        ← back to home
-      </a>
+        <a href="/" class="block text-sm text-gray-400 hover:text-white">
+            ← back to home
+        </a>
     </div>
 </div>
 
 <style>
-.active {
-  font-weight: bold;
-  background-color: var(--color-gray-700);
-}
+    .active {
+        font-weight: bold;
+        background-color: var(--color-gray-700);
+    }
 </style>

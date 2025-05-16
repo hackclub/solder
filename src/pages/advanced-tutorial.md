@@ -15,7 +15,7 @@ You can also place components on both sides. To change the side which a componen
 
 ![](/tutorial/multiside.png)
 
-In the PCB above, we can see that the battery holder is blue, so it's on the backside. The text of the resistors are of a darker yellow, so they are also on the back side. 
+In the PCB above, we can see that the battery holder is blue, so it's on the backside. The text of the resistors are of a darker yellow, so they are also on the back side.
 
 ## Ground Pours
 

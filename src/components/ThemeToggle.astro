@@ -1,0 +1,195 @@
+---
+
+---
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="sun-icon"
+    >
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="moon-icon"
+    >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+</button>
+
+<style>
+    .theme-toggle {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+    }
+
+    .theme-toggle:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    html.dark .theme-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .sun-icon,
+    .moon-icon {
+        position: absolute;
+        transition:
+            transform 0.5s,
+            opacity 0.3s;
+    }
+
+    html.dark .sun-icon {
+        opacity: 0;
+        transform: rotate(90deg) scale(0);
+    }
+
+    html:not(.dark) .moon-icon {
+        opacity: 0;
+        transform: rotate(-90deg) scale(0);
+    }
+
+    html.dark .moon-icon,
+    html:not(.dark) .sun-icon {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+
+    /* Theme specific colors */
+    html:not(.dark) .theme-toggle {
+        color: #609aff;
+    }
+
+    html.dark .theme-toggle {
+        color: #ffad60;
+    }
+</style>
+
+<script client:load>
+    // Execute immediately to prevent theme flashing
+    const initTheme = async () => {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+            document.querySelector("html")?.classList.add("dark");
+            document.querySelector("html")?.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.querySelector("html")?.classList.remove("dark");
+            document.querySelector("html")?.classList.add("light");
+            localStorage.setItem("theme", "light");
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 10));
+
+        document
+            .querySelector("html")
+            ?.setAttribute("data-switcherloaded", "true");
+    };
+
+    // Wait for document to be fully loaded
+    document.addEventListener("DOMContentLoaded", async () => {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+            if (theme === "dark") {
+                document.querySelector("html")?.classList.add("dark");
+                document.querySelector("html")?.classList.remove("light");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.querySelector("html")?.classList.remove("dark");
+                document.querySelector("html")?.classList.add("light");
+                localStorage.setItem("theme", "light");
+            }
+        };
+
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            localStorage.setItem("theme", "light");
+            setTheme("light");
+        }
+
+        // Toggle theme when button is clicked
+        themeToggle?.addEventListener("click", () => {
+            const isDark = document
+                .querySelector("html")
+                ?.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+        });
+
+        await initTheme();
+    });
+
+    window.addEventListener("locationchange", function () {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+            if (theme === "dark") {
+                document.querySelector("html")?.classList.add("dark");
+                document.querySelector("html")?.classList.remove("light");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.querySelector("html")?.classList.remove("dark");
+                document.querySelector("html")?.classList.add("light");
+                localStorage.setItem("theme", "light");
+            }
+        };
+
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            localStorage.setItem("theme", "light");
+            setTheme("light");
+        }
+
+        // Toggle theme when button is clicked
+        themeToggle?.addEventListener("click", () => {
+            const isDark = document
+                .querySelector("html")
+                ?.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+        });
+    });
+</script>
