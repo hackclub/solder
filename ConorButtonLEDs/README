@@ -1,3 +1,9 @@
 Schematic
 Pictures wont upload to the README
 Just followed the basic tutorial
+ BOM
+BT1	BatteryHolder_Keystone_3034_1x20mm	1	Battery_Cell
+D1, D2	LED_D5.0mm	2	LED
+R1, R2	R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal	2	R
+
+Slack username - @conor joyce
