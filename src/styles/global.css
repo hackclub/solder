@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "ChunkFive";
+  src: url("/fonts/ChunkFive-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -8,9 +16,14 @@ html {
 
 body {
   font-family: "Archivo", sans-serif;
-  background-image: url("/bg2.svg");
-  background-repeat: repeat;
   margin: 0;
+  min-height: 100vh;
+  background-color: #f9fafc;
+  background-image:
+    linear-gradient(to right, #dbeafe 1px, transparent 1px),
+    linear-gradient(to bottom, #dbeafe 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-repeat: repeat;
 }
 
 html[data-switcherloaded="true"] body {
@@ -23,28 +36,18 @@ html[data-switcherloaded="true"] body {
 /* Default theme is light, .dark class is applied for dark mode */
 html.dark body {
   background-color: #141f2e;
-  background-image: url("/bg3.svg");
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: white;
-}
-
-/* Keep the media query as a fallback when no preference is saved */
-@media (prefers-color-scheme: dark) {
-  html:not(.light) body {
-    background-color: #141f2e;
-    background-image: url("/bg3.svg");
-    color: white;
-  }
-
-  html:not(.light) .about-solder {
-    color: #e5aeae;
-  }
 }
 
 .about-solder {
   color: #ff6860;
 }
 
-html:not(.light) .about-solder {
+html.dark .about-solder {
   color: #ff9d9d;
 }
 
