@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import StickerButton from "../components/StickerButton.astro";
+import Footer from "../components/Footer2.astro";
+import Card from"../components/Part.astro";
 ---
 
 <html lang="en">
@@ -15,12 +17,13 @@ import StickerButton from "../components/StickerButton.astro";
 				font-family: "ChunkFive", "Archivo", sans-serif;
 			}
 
-			.word {
+			.heading {
 				display: inline-block;
 				color: white;
 				-webkit-text-stroke: 0.25em #ff4fa3;
 				paint-order: stroke fill;
 				filter: drop-shadow(3px 4px 0px rgba(0, 0, 0, 0.25));
+				line-height: 0.95;
 			}
 
 		</style>
@@ -33,18 +36,197 @@ import StickerButton from "../components/StickerButton.astro";
 		<a href="https://hackclub.com/"><img style="position: absolute; top: 30px; left: -2px; border: 0; width: 256px; z-index: 999;" src="https://assets.hackclub.com/banners/2026.svg" alt="Hack Club"/></a>
 
 
-		<div class="h-dvh">
-			<div class="h-full flex flex-col justify-center items-center">
-				<p class="word text-[72px]">make your first circuit board</p>
-				<p class="mt-4 text-3xl text-[#FDAD0E]">get a kit of electronics to assemble it for free!</p>
-				<div class="mt-6">
-					<StickerButton text="go to tutorial" href="/start" />
+		<div class="h-dvh relative overflow-hidden">
+			<div class="h-full flex flex-col justify-center items-center text-center mx-5">
+				
+				
+				<div class="relative">
+					<p class="text-[72px] mt-24 leading-[0.95]">
+					<span class="heading">make your first </span>
+					<span class="relative inline-block md:whitespace-nowrap">
+						<img src="/teal-text-bg.svg" class="hidden md:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] max-w-none"/>
+						<span class="heading">circuit board</span>
+					</span>
+				</p>
 				</div>
+				<p class="mt-4 text-3xl text-[#FDAD0E]">get a kit of electronics to assemble it for free!</p>
+				<div class="mt-6 space-x-4 space-y-4">
+					<StickerButton text="how this works" href="/start" />
+					<StickerButton text="go to tutorial" href="/start" color="#FF4EA3"/>
+					<StickerButton text="how to submit" href="/submit" color="#60B7FF"/>
+				</div>
+
+				<img src="/arrows.svg" class="mt-24 bobbing"/>
+
+
+
+				<img src="/iron-sketch.svg" class="absolute -top-18 -right-6 w-120 opacity-50 md:opacity-90 -z-10"/>
+				<img src="/breadboard-sketch.svg" class="hidden md:block absolute top-0 left-0 w-120 opacity-90 -z-10"/>
+
+
+				<img src="/circuitry.png" class="hidden md:block -z-10 absolute bottom-0 left-0 -scale-x-100 w-120 opacity-90"/>
+				<img src="/circuitry.png" class="-z-10 absolute bottom-0 right-0 w-120 opacity-30 md:opacity-90"/>
+
+
+			</div>
+
+			<div class="absolute bottom-6 left-0 right-0 flex flex-col justify-center text-center mx-5 text-[#FDAD0E] font-['Archivo'] font-bold">
+				<p>Solder is a program by Hack Club, free for teens worldwide! Ends [DATE].</p>
+				<p>Run by @acon + @cyao on the Hack Club Slack.</p>
 			</div>
 		</div>
 
 
+		<div class="bg-[#60B7FF] py-12">
 
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+		<div class="flex flex-col justify-center items-center text-center mx-5 my-24">
+			<p class="heading text-6xl">what's in the kit?</p>
+
+
+
+
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-16 justify-center text-center items-center">
+
+				<Card 
+					quantity="6"
+					title="5mm LED" 
+					content="random colors!" 
+					image="/hardware/leds.png"
+			  	/>
+				<Card 
+					quantity="24"
+					title="resistors" 
+					content="220Ω, 4.7kΩ, 47kΩ" 
+					image="/hardware/resistors.png"
+				/>
+				<Card 
+					quantity="15"
+					title="2N3904 transistor" 
+					content="NPN type!!" 
+					image="/hardware/transistor1.png"
+				/>
+				<Card 
+					quantity="15"
+					title="2N3906 transistor" 
+					content="PNP type!!" 
+					image="/hardware/transistor2.png"
+				/>
+				<Card 
+					quantity="1"
+					title="mini motor disc" 
+					content="it vibrates!" 
+					image="/hardware/motor.png"
+				/>
+				<Card 
+					quantity="1"
+					title="photoresistor" 
+					content="GL5528 + senses light..." 
+					image="/hardware/photoresistor.png"
+				/>
+				<Card 
+					quantity="2"
+					title="10uF capacitor" 
+					content="stores energy" 
+					image="/hardware/capacitor.png"
+				/>
+				<Card 
+					quantity="10"
+					title="6mm push button" 
+					content="very tactile. very clicky." 
+					image="/hardware/push.png"
+				/>
+				<Card 
+					quantity="2"
+					title="potentiometer" 
+					content="resistor... but flex" 
+					image="/hardware/potentiometer.png"
+				/>
+				
+				<Card 
+					quantity="1"
+					title="breadboard" 
+					content="use this to prototype!" 
+					image="/hardware/breadboard.png"
+				/>
+				<Card 
+					quantity="15"
+					title="jumper wires" 
+					content="use on breadboard!" 
+					image="/hardware/wires.png"
+				/>
+				<Card 
+					quantity="2"
+					title="CR2032 battery cell" 
+					content="to hold the battery!" 
+					image="/hardware/cell.png"
+				/>
+			</div>
+
+
+
+
+		</div>
+
+
+		<div class="flex flex-col justify-center items-center text-center my-24">
+			<p class="heading text-6xl">what is hack club?</p>
+
+
+		</div>
+
+
+		<div class="flex flex-col justify-center items-center my-24">
+			<p class="heading text-6xl">faq</p>
+
+
+			<div class="grid grid-cols-2 mt-8 font-['Archivo'] max-w-6xl gap-4">
+				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+					<p class="text-xl font-bold">What are the submission requirements?</p>
+					<ul class="list-disc ml-8 mt-2">
+						<li>you must be in high school (or younger)</li>
+						<li>the PCB/design/art needs to be original</li>
+						<li>the PCB needs to fit within 100x100mm</li>
+						<li>use the components given in the kit</li>
+						<li>add <i>spice</i> - something unique with flavour - to your PCB!</li>
+					</ul>
+				</div>
+				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+					<p class="text-xl font-bold">You could be making:</p>
+					<ul class="list-disc ml-8 mt-2">
+						<li>something to go on a keychain - maybe a cat?</li>
+						<li>a name badge - for hackathons, or even conventions :3</li>
+						<li>some cool logic gates with transistors</li>
+						<li>a fidget toy!</li>
+					</ul>
+				</div>
+				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+					<p class="text-xl font-bold">Can I submit if I've made a PCB before?</p>
+					<p class="mt-2">Yes! Please note that this program is targeted towards beginners - 
+						challenge yourself to make something cool with transitors if you're familiar with electronics!</p>
+				</div>
+				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+					<p class="text-xl font-bold">Can I do Solder more than once?</p>
+					<p class="mt-2">No :( This includes if you've already done Solder v1 too. There are plenty of other Hack Club hardware projects you could do!</p>
+				</div>
+			</div>
+
+
+		</div>
+
+		<Footer />
 
 
 
