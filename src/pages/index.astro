@@ -3,6 +3,7 @@ import "../styles/global.css";
 import StickerButton from "../components/StickerButton.astro";
 import Footer from "../components/Footer2.astro";
 import Card from"../components/Part.astro";
+import Marquee from "../components/Marquee.astro";
 ---
 
 <html lang="en">
@@ -64,23 +65,61 @@ import Card from"../components/Part.astro";
 				<img src="/breadboard-sketch.svg" class="hidden md:block absolute top-0 left-0 w-120 opacity-90 -z-10"/>
 
 
-				<img src="/circuitry.png" class="hidden md:block -z-10 absolute bottom-0 left-0 -scale-x-100 w-120 opacity-90"/>
-				<img src="/circuitry.png" class="-z-10 absolute bottom-0 right-0 w-120 opacity-30 md:opacity-90"/>
+				<img src="/circuitry.png" class="hidden md:block -z-10 absolute bottom-0 left-0 md:-left-44 2xl:left-0 -scale-x-100 w-120 opacity-90"/>
+				<img src="/circuitry.png" class="-z-10 absolute bottom-0 right-0 md:-right-44 2xl:right-0 w-120 opacity-30 md:opacity-90"/>
 
 
 			</div>
 
-			<div class="absolute bottom-6 left-0 right-0 flex flex-col justify-center text-center mx-5 text-[#FDAD0E] font-['Archivo'] font-bold">
+			<div class="absolute bottom-36 left-0 right-0 flex flex-col justify-center text-center mx-5 text-[#FDAD0E] font-['Archivo'] font-bold">
 				<p>Solder is a program by Hack Club, free for teens worldwide! Ends [DATE].</p>
 				<p>Run by @acon + @cyao on the Hack Club Slack.</p>
 			</div>
 		</div>
 
 
-		<div class="bg-[#60B7FF] py-12">
+		<div class="relative bg-[#60B7FF] py-24">
+			<Marquee />
+
+			<div class="mt-44 flex flex-col justify-center items-center">
+
+				<div class="relative isolate">
+					<img src="/how-it-works-bg.svg" class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none"/>
+					<p class="relative text-4xl text-white">how this works:</p>
+				</div>
+
+				<div class="grid grid-cols-2 gap-2 bg-white p-12 rounded max-w-[1300px] px-24 mx-4 my-4 text-center text-[#F1881E]">
+					<div class="flex flex-col justify-end">
+						<p class="translate-y-2">1. Design your PCB!</p>
+						<img src="/how1.png" class="w-full aspect-[924/563] object-cover rounded"/>
+					</div>
+
+					<div class="flex flex-col justify-end">
+						<p class="translate-y-2">2. Submit your design!</p>
+						<img src="/how2.png" class="w-full aspect-[924/563] object-cover rounded"/>
+					</div>
+
+					<div class="flex flex-col justify-end">
+						<p class="translate-y-2">3. We'll ship your kit!</p>
+						<img src="/how3.png" class="w-full aspect-[924/563] object-cover rounded"/>
+					</div>
+
+					<div class="flex flex-col justify-end">
+						<p class="translate-y-2">4. Solder it together!</p>
+						<img src="/how4.png" class="w-full aspect-[924/563] object-cover rounded"/>
+					</div>
+
+				</div>
+
+				<div class="-translate-y-10">
+					<StickerButton text="ready? go to tutorial ->" href="/start" color="#FF4EA3"/>
+				</div>
+
+				
 
 
 
+			</div>
 
 
 		</div>
@@ -196,7 +235,7 @@ import Card from"../components/Part.astro";
 				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">What are the submission requirements?</p>
 					<ul class="list-disc ml-8 mt-2">
-						<li>you must be in high school (or younger)</li>
+						<li>you must be between ages 13-18 (inclusive)</li>
 						<li>the PCB/design/art needs to be original</li>
 						<li>the PCB needs to fit within 100x100mm</li>
 						<li>use the components given in the kit</li>
