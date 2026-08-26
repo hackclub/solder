@@ -35,6 +35,9 @@ import Marquee from "../components/Marquee.astro";
 	<body>
 
 		<a href="https://hackclub.com/"><img style="position: absolute; top: 30px; left: -2px; border: 0; width: 256px; z-index: 999;" src="https://assets.hackclub.com/banners/2026.svg" alt="Hack Club"/></a>
+		<div class="absolute top-6 right-6 z-50">
+			<StickerButton text="tutorial" href="/start" color="#FF4EA3"/>
+		</div>
 
 
 		<div class="h-dvh relative overflow-hidden">
@@ -42,6 +45,7 @@ import Marquee from "../components/Marquee.astro";
 				
 				
 				<div class="relative">
+					<img src="/flare.png" class="rotate-90 absolute top-0 -left-28 h-36 hidden xl:block"/>
 					<p class="text-[72px] mt-24 leading-[0.95]">
 					<span class="heading">make your first </span>
 					<span class="relative inline-block md:whitespace-nowrap">
@@ -57,7 +61,7 @@ import Marquee from "../components/Marquee.astro";
 					<StickerButton text="how to submit" href="/submit" color="#60B7FF"/>
 				</div>
 
-				<img src="/arrows.svg" class="mt-24 bobbing"/>
+				<img src="/arrows.svg" class="mt-24 bobbing hidden md:block"/>
 
 
 
@@ -71,15 +75,15 @@ import Marquee from "../components/Marquee.astro";
 
 			</div>
 
-			<div class="absolute bottom-36 left-0 right-0 flex flex-col justify-center text-center mx-5 text-[#FDAD0E] font-['Archivo'] font-bold">
+			<div class="absolute bottom-12 md:bottom-40 left-0 right-0 flex flex-col justify-center text-center mx-5 text-[#FDAD0E] font-['Archivo'] font-bold">
 				<p>Solder is a program by Hack Club, free for teens worldwide! Ends [DATE].</p>
 				<p>Run by @acon + @cyao on the Hack Club Slack.</p>
 			</div>
 		</div>
 
 
-		<div class="relative bg-[#60B7FF] py-24">
-			<Marquee />
+		<div class="relative py-24" style="background-image: url('/blue-bg.png'); background-repeat: repeat;">
+			<Marquee/>
 
 			<div class="mt-44 flex flex-col justify-center items-center">
 
@@ -88,25 +92,39 @@ import Marquee from "../components/Marquee.astro";
 					<p class="relative text-4xl text-white">how this works:</p>
 				</div>
 
-				<div class="grid grid-cols-2 gap-2 bg-white p-12 rounded max-w-[1300px] px-24 mx-4 my-4 text-center text-[#F1881E]">
-					<div class="flex flex-col justify-end">
-						<p class="translate-y-2">1. Design your PCB!</p>
-						<img src="/how1.png" class="w-full aspect-[924/563] object-cover rounded"/>
+				<div class="bg-white p-12 rounded max-w-[1300px] px-8 md:px-24 mx-4 my-4 text-center text-[#FF8E1C]">
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+						<div class="flex flex-col justify-end">
+							<p class="translate-y-2">1. Design your PCB!</p>
+							<img src="/how1.png" class="w-full aspect-[924/563] object-cover rounded"/>
+						</div>
+
+						<div class="flex flex-col justify-end">
+							<p class="translate-y-2">2. Submit your design!</p>
+							<img src="/how2.png" class="w-full aspect-[924/563] object-cover rounded"/>
+						</div>
+
+						<div class="flex flex-col justify-end">
+							<p class="translate-y-2">3. We'll ship your kit!</p>
+							<img src="/how3.png" class="w-full aspect-[924/563] object-cover rounded"/>
+						</div>
+
+						<div class="flex flex-col justify-end">
+							<p class="translate-y-2">4. Solder it together!</p>
+							<img src="/how4.png" class="w-full aspect-[924/563] object-cover rounded"/>
+						</div>						
 					</div>
 
-					<div class="flex flex-col justify-end">
-						<p class="translate-y-2">2. Submit your design!</p>
-						<img src="/how2.png" class="w-full aspect-[924/563] object-cover rounded"/>
-					</div>
 
-					<div class="flex flex-col justify-end">
-						<p class="translate-y-2">3. We'll ship your kit!</p>
-						<img src="/how3.png" class="w-full aspect-[924/563] object-cover rounded"/>
-					</div>
-
-					<div class="flex flex-col justify-end">
-						<p class="translate-y-2">4. Solder it together!</p>
-						<img src="/how4.png" class="w-full aspect-[924/563] object-cover rounded"/>
+					<div class="mt-8 mb-4 mx-4 lg:mx-44 grid grid-cols-1 sm:grid-cols-[6fr_4fr] gap-8">
+						<img src="/solder.gif" class="w-full"/>
+						<div class="space-y-2 flex flex-col justify-center items-center">
+							<p class="text-xl">This is the Solder Kit!</p>
+							<p class="font-['Archivo']">Design your PCB (printed circuit board) around the components in this kit, and when you recieve it, you can assemble it with these parts!</p>
+							<p class="font-['Archivo']">In addition to the kit, we'll also send you a $5 HCB card grant to purchase your PCB, as well as a soldering iron if you don't have one!</p>
+							<p class="font-['Archivo']">It takes around 5h to design your first PCB, from scratch :D</p>
+						</div>
+						
 					</div>
 
 				</div>
@@ -115,29 +133,16 @@ import Marquee from "../components/Marquee.astro";
 					<StickerButton text="ready? go to tutorial ->" href="/start" color="#FF4EA3"/>
 				</div>
 
-				
-
-
-
 			</div>
 
 
 		</div>
 
 
-
-
-
-
-
 		<div class="flex flex-col justify-center items-center text-center mx-5 my-24">
 			<p class="heading text-6xl">what's in the kit?</p>
 
-
-
-
-
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-16 justify-center text-center items-center">
+			<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4 mt-16 justify-center text-center">
 
 				<Card 
 					quantity="6"
@@ -220,18 +225,30 @@ import Marquee from "../components/Marquee.astro";
 		</div>
 
 
-		<div class="flex flex-col justify-center items-center text-center my-24">
-			<p class="heading text-6xl">what is hack club?</p>
+		<div class="flex flex-col justify-center items-center text-center my-24 relative mx-5">
+			<div class="mt-8 border-2 rounded-md border-[#FF60A8] bg-white p-12 py-16 text-[#FF60A8] relative max-w-3xl">
+				<p class="heading text-6xl">what is hack club?</p>
+				<div class="font-['Archivo'] space-y-4 mt-12">
+					<p><a href="https://hackclub.com/" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy hover:text-[#FF7A60] transition">Hack Club</a> is a 501(c)(3) nonprofit that runs programs and events to encourage more students to build and publish engineering projects.</p>
+					<p>We’re a community of 100,000+ high schoolers in 119 countries who learn by building things. Artists, engineers, hardware makers, game devs: everyone’s welcome, and nobody needs experience to start.</p>
+					<p>Curious about Hack Club? Learn more about our
+						<a href="https://hackclub.com/philosophy" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy hover:text-[#FF7A60] transition">philosophy</a>,
+						<a href="https://hackclub.com/philanthropy" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy hover:text-[#FF7A60] transition">donors</a> or
+					    <a href="https://hackclub.com/" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy hover:text-[#FF7A60] transition">other programs</a>.
+					</p>
+				</div>
 
-
+				<img src="/pictures-left.png" class="hidden lg:block absolute right-full top-1/2 -translate-y-1/2 mr-8 w-64 xl:w-72 2xl:w-84 -z-10"/>
+				<img src="/pictures-right.png" class="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 ml-8 w-64 xl:w-72 2xl:w-84 -z-10"/>
+			</div>
 		</div>
 
 
-		<div class="flex flex-col justify-center items-center my-24">
+		<div class="flex flex-col justify-center items-center mt-24 mx-5 relative pb-24">
 			<p class="heading text-6xl">faq</p>
 
 
-			<div class="grid grid-cols-2 mt-8 font-['Archivo'] max-w-6xl gap-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 mt-8 font-['Archivo'] max-w-6xl gap-4">
 				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">What are the submission requirements?</p>
 					<ul class="list-disc ml-8 mt-2">
@@ -243,9 +260,10 @@ import Marquee from "../components/Marquee.astro";
 					</ul>
 				</div>
 				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
-					<p class="text-xl font-bold">You could be making:</p>
-					<ul class="list-disc ml-8 mt-2">
-						<li>something to go on a keychain - maybe a cat?</li>
+					<p class="text-xl font-bold">What could I make?</p>
+					<p class="mt-2">Here are some ideas:</p>
+					<ul class="list-disc ml-8">
+						<li>a keychain! maybe in the shape of a cat?</li>
 						<li>a name badge - for hackathons, or even conventions :3</li>
 						<li>some cool logic gates with transistors</li>
 						<li>a fidget toy!</li>
@@ -258,9 +276,12 @@ import Marquee from "../components/Marquee.astro";
 				</div>
 				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">Can I do Solder more than once?</p>
-					<p class="mt-2">No :( This includes if you've already done Solder v1 too. There are plenty of other Hack Club hardware projects you could do!</p>
+					<p class="mt-2">No :( This includes if you've already done Solder V1 too. There are plenty of other Hack Club hardware projects you could do!</p>
 				</div>
 			</div>
+
+			<img src="/circuitry.png" class="hidden md:block -z-10 absolute bottom-0 left-0 md:-left-44 2xl:left-0 -scale-x-100 w-120 opacity-90"/>
+			<img src="/circuitry.png" class="-z-10 absolute bottom-0 right-0 md:-right-44 2xl:right-0 w-120 opacity-30 md:opacity-90"/>
 
 
 		</div>
