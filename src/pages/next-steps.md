@@ -21,7 +21,7 @@ You can also watch this [HOW TO SOLDER! (Beginner's Guide)](https://www.youtube.
 
 ### After assembly
 
-Test that it's working, and send a video to #solder!!
+Test that it's working, and send a video to [#solder](https://hackclub.enterprise.slack.com/archives/C08L288G22Y)!!
 
 ### More things to do
 

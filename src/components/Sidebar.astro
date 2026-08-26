@@ -18,6 +18,26 @@ const postList = Object.entries(posts)
 postList.sort((a, b) => a.order - b.order);
 
 const currentPath = Astro.url.pathname.replaceAll("/", "");
+
+const sectionBySlug: Record<string, string> = {
+	start: "Start Here",
+	resources: "Start Here",
+	parts: "Guide",
+	tutorial: "Guide",
+	"easyeda-tutorial": "Guide",
+	"advanced-tutorial": "Guide",
+	art: "Guide",
+	submit: "Submit",
+	leaders: "Submit",
+	"next-steps": "Submit",
+};
+
+const sectionOrder = ["Start Here", "Guide", "Submit"];
+
+const sections = sectionOrder.map((title) => ({
+	title,
+	posts: postList.filter((post) => sectionBySlug[post.slug] === title),
+}));
 ---
 
 <div
@@ -27,24 +47,33 @@ const currentPath = Astro.url.pathname.replaceAll("/", "");
         <a href="/">
             <img src="/v1/animelogo.png" class="w-full p-5" />
         </a>
-        <ul class="pl-4 pr-4" style={"padding-left: 1rem;"}>
+        <ul class="px-4 space-y-6">
             {
-                postList.map((post) => {
-                    const isActive = `${post.slug}` === currentPath;
-                    return (
-                        <li class="text-md post p-1">
-                            <a
-                                href={`/${post.slug}`}
-                                class={
-                                    "hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col " +
-                                    (isActive ? "active" : "")
-                                }
-                            >
-                                {post.title}
-                            </a>
-                        </li>
-                    );
-                })
+                sections.map((section) => (
+                    <li>
+                        <div class="flex items-center justify-between px-2 py-1 text-white font-bold text-sm">
+                            {section.title}
+                        </div>
+                        <ul class="mt-1 ml-2 pl-3 border-l border-gray-600 space-y-0.5">
+                            {section.posts.map((post) => {
+                                const isActive = `${post.slug}` === currentPath;
+                                return (
+                                    <li>
+                                        <a
+                                            href={`/${post.slug}`}
+                                            class={
+                                                "block py-1 px-3 rounded-md text-gray-300 hover:bg-gray-700 hover:text-white text-base " +
+                                                (isActive ? "active" : "")
+                                            }
+                                        >
+                                            {post.title}
+                                        </a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </li>
+                ))
             }
         </ul>
     </nav>
