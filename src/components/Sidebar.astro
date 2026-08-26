@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
-import TOC from "./TOC.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 const posts = import.meta.glob("../pages/*.md", { eager: true });
-const { title = "NAN", sections = [] } = Astro.props;
 
 // To array
 const postList = Object.entries(posts)
@@ -20,65 +19,69 @@ postList.sort((a, b) => a.order - b.order);
 
 const currentPath = Astro.url.pathname.replaceAll("/", "");
 
-// The animation
-const anim = {
-	old: {
-		name: "collapse",
-		duration: "0.3s",
-		easing: "ease-in",
-		direction: "reverse",
-	},
-	new: {
-		name: "collapse",
-		duration: "0.3s",
-		easing: "ease-in-out",
-	},
+const sectionBySlug: Record<string, string> = {
+	start: "Start Here",
+	resources: "Start Here",
+	parts: "Guide",
+	tutorial: "Guide",
+	"easyeda-tutorial": "Guide",
+	"advanced-tutorial": "Guide",
+	art: "Guide",
+	submit: "Submit",
+	leaders: "Submit",
+	"next-steps": "Submit",
 };
 
-const collapse = {
-	forwards: anim,
-	backwards: anim,
-};
+const sectionOrder = ["Start Here", "Guide", "Submit"];
+
+const sections = sectionOrder.map((title) => ({
+	title,
+	posts: postList.filter((post) => sectionBySlug[post.slug] === title),
+}));
 ---
 
 <div
     class="w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0"
 >
     <nav class="flex-1 overflow-y-auto">
-        <img src="/animelogo.png" class="w-full p-5" />
-        <ul class="pl-4 pr-4" style={"padding-left: 1rem;"}>
+        <a href="/">
+            <img src="/v1/animelogo.png" class="w-full p-5" />
+        </a>
+        <ul class="px-4 space-y-6">
             {
-                postList.map((post) => {
-                    const isActive = `${post.slug}` === currentPath;
-                    return (
-                        <li class="text-md post p-1">
-                            <a
-                                href={`/${post.slug}`}
-                                class={
-                                    "hover:bg-gray-700 p-[5px] px-4 rounded-lg flex flex-col " +
-                                    (isActive ? "active" : "")
-                                }
-                            >
-                                {post.title}
-                            </a>
-                            {isActive && (
-                                <div
-                                    id="toc-wrapper"
-                                    transition:animate={collapse}
-                                >
-                                    <TOC title={title} sections={sections} />
-                                </div>
-                            )}
-                        </li>
-                    );
-                })
+                sections.map((section) => (
+                    <li>
+                        <div class="flex items-center justify-between px-2 py-1 text-white font-bold text-sm">
+                            {section.title}
+                        </div>
+                        <ul class="mt-1 ml-2 pl-3 border-l border-gray-600 space-y-0.5">
+                            {section.posts.map((post) => {
+                                const isActive = `${post.slug}` === currentPath;
+                                return (
+                                    <li>
+                                        <a
+                                            href={`/${post.slug}`}
+                                            class={
+                                                "block py-1 px-3 rounded-md text-gray-300 hover:bg-gray-700 hover:text-white text-base " +
+                                                (isActive ? "active" : "")
+                                            }
+                                        >
+                                            {post.title}
+                                        </a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </li>
+                ))
             }
         </ul>
     </nav>
-    <div class="p-4 border-t border-gray-700">
-        <a href="/" class="block text-sm text-gray-400 hover:text-white">
+    <div class="p-4 border-t border-gray-700 flex items-center justify-between">
+        <a href="/" class="text-sm text-gray-400 hover:text-white">
             ← back to home
         </a>
+        <ThemeToggle />
     </div>
 </div>
 

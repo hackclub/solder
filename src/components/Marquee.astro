@@ -1,0 +1,41 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+const examplesDir = path.join(process.cwd(), "public/examples");
+const images = fs
+	.readdirSync(examplesDir)
+	.filter((f) => /\.(png|jpe?g|webp|gif)$/i.test(f));
+
+const track = [...images, ...images];
+---
+
+<div class="absolute left-0 right-0 top-2 translate-y-0 md:top-0 md:-translate-y-1/2 z-10 overflow-x-hidden -rotate-1">
+	<div class="flex w-max marquee py-6">
+		{
+			track.map((img) => (
+				<div class="shrink-0 mx-4 bg-white rounded-lg shadow-[4px_6px_0_rgba(0,0,0,0.2)] p-2">
+					<img
+						src={`/examples/${img}`}
+						class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-md"
+					/>
+				</div>
+			))
+		}
+	</div>
+</div>
+
+<style>
+	.marquee {
+		animation: marquee-scroll 25s linear infinite;
+	}
+
+	@keyframes marquee-scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+</style>

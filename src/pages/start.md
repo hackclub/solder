@@ -9,7 +9,7 @@ order: 1
 
 If you're not already on the Hack Club Slack, get in here: https://hackclub.com/slack/ - join thousands of other technical teens, ask for help, and learn about the latest Solder updates!
 
-When you finish your project, you'll also need to post it in the [#solder-ships] channel. Join it and check out what others are making!
+When you finish your project, you'll also need to post it in the [#solder-ships](https://hackclub.enterprise.slack.com/archives/C08N2CN8E2C) channel. Join it and check out what others are making!
 
 ### What's a PCB?
 
@@ -23,7 +23,7 @@ See also: [SparkFun's article](https://learn.sparkfun.com/tutorials/pcb-basics/a
 
 Complete beginner? No worries!
 
-This tutorial aims to teach you how to design a printed circuit board (PCB for short) from scratch.
+This tutorial aims to teach you how to design a PCB from scratch.
 
 To design PCBs, we use **KiCad**! It's free and open source. **Download it here: https://www.kicad.org/download/**
 
@@ -38,3 +38,9 @@ You first need to create a new project: Go to File &gt; New Project and create i
 ![](/tutorial/start.png)
 
 If it looks like that, congrats - you've just started your first PCB project!
+
+### Kit Contents
+
+here are the parts you get!
+
+

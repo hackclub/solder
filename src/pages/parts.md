@@ -57,8 +57,6 @@ Potentiometers have 3 terminals, and act as a variable resistor. By connecting t
 
 A transistor is a device that allows you to use change in voltage to switch things on and off. They are kind of like a valve, but instead of controlling water they control electricity. They are divided into NPN and PNP types, and they have three pins, called emmiter, collector and base (also called gate).
 
-![part](https://hc-cdn.hel1.your-objectstorage.com/s/v3/a381d42773bcd403a74388d6688b6665c933234b_image.png)
-
 In the case of a NPN transistor, the emmiter is where the electrons exits, the collector where the electrons enters. The gate is basically the switch. If the voltage on the gate is higher then on the emitter, the transister will allow electricity to pass. Inversly, if the the voltage gate is lower or equal to the emitter, the transistor will not allow electrons to pass.
 
 But the switches are not perfect, electricity will also conduct from the gate to the emitter, so if you don't put a resistor on the gate, you might cause a short circuit. The current allowed to pass through the gate is also important. Each amp of current that can pass through the gate will generally allow ~100 amps of electricity to pass from the collector to the emitter. Calculate the current on the gate with ohms law! Also don't make your circuit depend too much on this, the 100 will change to 60 or 140 depending on temperature!
@@ -78,4 +76,14 @@ Diodes are simple electrical components that only allows electricity to flow in 
 LEDs are the same as diodes (They are called Light Emitting **Diodes** after all), but they emit light when electricity flows through it! Remeber to add a 220 ohm resistor on one end, so the LED doesn't burn itself.
 
 ![part](/tutorial/led.png)
+
+### 555 Timer
+
+The 555 timer is an integrated circuit (IC), used to generate oscillations and pulses within circuits. 
+
+It has multiple operating modes, but the most common is the astable mode, where it basically acts as an oscillator or clock, where it generates steady signals.
+
+You can make a lot of cool things with this! [Here](https://www.build-electronic-circuits.com/555-timer/) is an article with a few examples.
+
+![](https://cdn.hackclub.com/01a03f96-4bcb-71db-b775-f2b515e0c6a2/555timer.png)
 
