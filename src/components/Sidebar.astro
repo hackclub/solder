@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
-import TOC from "./TOC.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 const posts = import.meta.glob("../pages/*.md", { eager: true });
-const { title = "NAN", sections = [] } = Astro.props;
 
 // To array
 const postList = Object.entries(posts)
@@ -19,33 +18,15 @@ const postList = Object.entries(posts)
 postList.sort((a, b) => a.order - b.order);
 
 const currentPath = Astro.url.pathname.replaceAll("/", "");
-
-// The animation
-const anim = {
-	old: {
-		name: "collapse",
-		duration: "0.3s",
-		easing: "ease-in",
-		direction: "reverse",
-	},
-	new: {
-		name: "collapse",
-		duration: "0.3s",
-		easing: "ease-in-out",
-	},
-};
-
-const collapse = {
-	forwards: anim,
-	backwards: anim,
-};
 ---
 
 <div
     class="w-64 bg-gray-800 text-white fixed top-0 left-0 flex flex-col bottom-0"
 >
     <nav class="flex-1 overflow-y-auto">
-        <img src="/v1/animelogo.png" class="w-full p-5" />
+        <a href="/">
+            <img src="/v1/animelogo.png" class="w-full p-5" />
+        </a>
         <ul class="pl-4 pr-4" style={"padding-left: 1rem;"}>
             {
                 postList.map((post) => {
@@ -61,24 +42,17 @@ const collapse = {
                             >
                                 {post.title}
                             </a>
-                            {isActive && (
-                                <div
-                                    id="toc-wrapper"
-                                    transition:animate={collapse}
-                                >
-                                    <TOC title={title} sections={sections} />
-                                </div>
-                            )}
                         </li>
                     );
                 })
             }
         </ul>
     </nav>
-    <div class="p-4 border-t border-gray-700">
-        <a href="/" class="block text-sm text-gray-400 hover:text-white">
+    <div class="p-4 border-t border-gray-700 flex items-center justify-between">
+        <a href="/" class="text-sm text-gray-400 hover:text-white">
             ← back to home
         </a>
+        <ThemeToggle />
     </div>
 </div>
 

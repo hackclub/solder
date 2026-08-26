@@ -1,45 +1,30 @@
 ---
-const { title = "NAN", sections = [] } = Astro.props;
-const textColor = "text-gray-400";
-const hoverColor = "";
+const { sections = [] } = Astro.props;
 ---
 
 <div id="toc-container" class="toc-container">
-    <nav class="flex-1 overflow-y-auto text-base">
-        <div
-            class="text-md"
-            style="font-weight: normal; text-decoration: none;"
-        >
-            <ul
-                class="space-y-1 p-1"
-                style="font-weight: normal; text-decoration: none;"
-            >
-                {
-                    sections.map((header) => (
-                        <li
-                            style={"padding-left:" + (header.depth - 1) + "rem"}
-                            class={
-                                textColor + " sidebar-item hover:" + hoverColor
-                            }
+    <nav class="flex-1 overflow-y-auto text-sm">
+        <ul class="space-y-2 text-center">
+            {
+                sections.map((header) => (
+                    <li class="sidebar-item">
+                        <a
+                            href={"#" + header.slug}
+                            class="sidebar-link block text-gray-500 hover:text-gray-900"
+                            data-slug={header.slug}
                         >
-                            <a
-                                href={"#" + header.slug}
-                                class="sidebar-link hover:text-blue-300"
-                                data-slug={header.slug}
-                            >
-                                {header.text}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </div>
+                            {header.text}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
     </nav>
 </div>
 
 <script client:load>
     function load() {
-        const activeColor = "text-blue-200";
+        const activeColor = "text-blue-500";
 
         // Highlight the current section we are in interactivly
         const sidebarLinks = document.querySelectorAll(".sidebar-link");

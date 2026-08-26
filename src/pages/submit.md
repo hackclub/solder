@@ -53,11 +53,12 @@ After either @acon or @cyao (on Slack) reacts with the ✅ emoji, it's approved!
 
 ---
 
-### Here from a workshop?
+### Here from a club workshop?
 
-Your club leader (or teacher) will give you a form to fill out!
+You'll need to join the Hack Club Slack in order to ship. Get your club leader to help you with that if you're struggling! You still need to post in #solder-ships. You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
 
-If you're in the Slack, you should still post it in #solder-ships. You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
+
+After you submit, we'll coordinate with your club leader to get your boxes shipped at the same time. 
 
 ### Club leader?
 
