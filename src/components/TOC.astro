@@ -3,8 +3,9 @@ const { sections = [] } = Astro.props;
 ---
 
 <div id="toc-container" class="toc-container">
+    <p class="text-xs text-gray-400 text-right mb-3">On this page</p>
     <nav class="flex-1 overflow-y-auto text-sm">
-        <ul class="space-y-2 text-center">
+        <ul class="space-y-2 text-right">
             {
                 sections.map((header) => (
                     <li class="sidebar-item">
