@@ -27,6 +27,11 @@ import Marquee from "../components/Marquee.astro";
 				line-height: 0.95;
 			}
 
+			@media (max-height: 700px) {
+				.scroll-hint {
+					display: none;
+				}
+			}
 		</style>
 	</head>
 
@@ -45,8 +50,8 @@ import Marquee from "../components/Marquee.astro";
 				
 				
 				<div class="relative">
-					<img src="/flare.png" class="rotate-90 absolute top-0 -left-28 h-36 hidden xl:block"/>
-					<p class="text-[72px] mt-24 leading-[0.95]">
+					<img src="/flare.png" class="rotate-90 absolute -top-10 -left-28 h-36 hidden xl:block"/>
+					<p class="text-[72px] mt-12 leading-[0.95]">
 					<span class="heading">make your first </span>
 					<span class="relative inline-block md:whitespace-nowrap">
 						<img src="/teal-text-bg.svg" class="hidden md:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] max-w-none"/>
@@ -61,7 +66,7 @@ import Marquee from "../components/Marquee.astro";
 					<StickerButton text="how to submit" href="/submit" color="#60B7FF"/>
 				</div>
 
-				<img src="/arrows.svg" class="mt-24 bobbing hidden md:block"/>
+				<img src="/arrows.svg" class="scroll-hint mt-12 bobbing hidden md:block"/>
 
 
 

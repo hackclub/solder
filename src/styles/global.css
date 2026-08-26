@@ -22,8 +22,8 @@ body {
   overflow-x: hidden;
   background-color: #f9fafc;
   background-image:
-    linear-gradient(to right, #dbeafe 1px, transparent 1px),
-    linear-gradient(to bottom, #dbeafe 1px, transparent 1px);
+    linear-gradient(to right, #dcf2fa 1px, transparent 1px),
+    linear-gradient(to bottom, #dcf2fa 1px, transparent 1px);
   background-size: 24px 24px;
   background-repeat: repeat;
 }
