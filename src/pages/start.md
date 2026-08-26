@@ -38,3 +38,9 @@ You first need to create a new project: Go to File &gt; New Project and create i
 ![](/tutorial/start.png)
 
 If it looks like that, congrats - you've just started your first PCB project!
+
+### Kit Contents
+
+here are the parts you get!
+
+
