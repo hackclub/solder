@@ -37,7 +37,7 @@ Capacitors are like tiny batteries, they charge up when you apply a voltage acro
 
 ### Buttons
 
-Buttons do what they do! Press em and they will conduct a current. They have 4 pins, but each pair is actually connected together so it's actually 2 pins.
+Buttons! Press 'em and they will conduct a current. They have 4 pins, but each pair is actually connected together so it's actually 2 pins.
 
 ![part](/tutorial/button.png)
 
@@ -75,15 +75,17 @@ Diodes are simple electrical components that only allows electricity to flow in 
 
 LEDs are the same as diodes (They are called Light Emitting **Diodes** after all), but they emit light when electricity flows through it! Remeber to add a 220 ohm resistor on one end, so the LED doesn't burn itself.
 
+Since it is a diode, it does matter which way you wire it. The triangle part should be pointing *towards* ground, so here, the first pin should be connected to ground and the second pin should be connected to the power source.
+
 ![part](/tutorial/led.png)
 
 ### 555 Timer
 
 The 555 timer is an integrated circuit (IC), used to generate oscillations and pulses within circuits. 
 
-It has multiple operating modes, but the most common is the astable mode, where it basically acts as an oscillator or clock, where it generates steady signals.
+It has multiple operating modes, but the most common is the astable mode, where it basically acts as an oscillator/clock, where it generates steady signals.
 
 You can make a lot of cool things with this! [Here](https://www.build-electronic-circuits.com/555-timer/) is an article with a few examples.
 
-![](https://cdn.hackclub.com/01a03f96-4bcb-71db-b775-f2b515e0c6a2/555timer.png)
+![part](/tutorial/555timer.png)
 
