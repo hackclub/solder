@@ -213,7 +213,7 @@ div.markdown ol {
   padding-left: 40px;
 }
 
-div.markdown p:last-child {
+div.markdown > *:last-child {
   padding-bottom: 5rem;
 }
 

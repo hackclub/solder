@@ -21,7 +21,7 @@ import Marquee from "../components/Marquee.astro";
 			.heading {
 				display: inline-block;
 				color: white;
-				-webkit-text-stroke: 0.25em #ff4fa3;
+				-webkit-text-stroke: 0.25em #FF477B;
 				paint-order: stroke fill;
 				filter: drop-shadow(3px 4px 0px rgba(0, 0, 0, 0.25));
 				line-height: 0.95;
@@ -39,34 +39,38 @@ import Marquee from "../components/Marquee.astro";
 
 	<body>
 
-		<a href="https://hackclub.com/"><img style="position: absolute; top: 30px; left: -2px; border: 0; width: 256px; z-index: 999;" src="https://assets.hackclub.com/banners/2026.svg" alt="Hack Club"/></a>
+		{/* <div class="top-0 left-0 right-0 h-4 z-[1000]" style="background-color: #FDAD0E;"></div> */}
+
+		<a href="https://hackclub.com/"><img style="position: absolute; top: 30px; left: -2px; border: 0; width: 256px; z-index: 999;" src="https://assets.hackclub.com/banners/2026.svg" alt="Hack Club" class=""/></a>
 		<div class="absolute top-6 right-6 z-50">
-			<StickerButton text="tutorial" href="/start" color="#FF4EA3"/>
+			<StickerButton text="tutorial" href="/start" color="#FF477B"/>
 		</div>
 
 
 		<div class="h-dvh relative overflow-hidden">
-			<div class="h-full flex flex-col justify-center items-center text-center mx-5">
+			<div class="h-full flex flex-col justify-center items-center text-center mx-5 md:pb-24">
 				
 				
 				<div class="relative">
 					<img src="/flare.png" class="rotate-90 absolute -top-10 -left-28 h-36 hidden xl:block"/>
-					<p class="text-[72px] mt-12 leading-[0.95]">
-					<span class="heading">make your first </span>
-					<span class="relative inline-block md:whitespace-nowrap">
-						<img src="/teal-text-bg.svg" class="hidden md:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] max-w-none"/>
-						<span class="heading">circuit board</span>
-					</span>
-				</p>
+					<p class="text-6xl sm:text-[72px] mt-12 leading-[1]">
+						<span class="heading">make your first </span>
+						<span class="relative inline-block md:whitespace-nowrap">
+							<img src="/teal-text-bg.svg" class="hidden md:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] max-w-none"/>
+							<span class="heading">circuit board</span>
+						</span>
+					</p>
 				</div>
-				<p class="mt-4 text-3xl text-[#FDAD0E]">get a kit of electronics to assemble it for free!</p>
-				<div class="mt-6 space-x-4 space-y-4">
-					<StickerButton text="how this works" href="/start" />
-					<StickerButton text="go to tutorial" href="/start" color="#FF4EA3"/>
+				<p class="mt-4 text-xl sm:text-3xl text-[#FDAD0E]">get a kit of electronics to assemble it for free!</p>
+				<div class="mt-6 flex flex-wrap justify-center gap-2 md:gap-4">
+					<StickerButton text="how this works" href="#how-this-works" />
+					<StickerButton text="go to tutorial" href="/start" color="#FF477B"/>
 					<StickerButton text="how to submit" href="/submit" color="#60B7FF"/>
 				</div>
 
-				<img src="/arrows.svg" class="scroll-hint mt-12 bobbing hidden md:block"/>
+				<div class="mt-6 flex flex-col justify-center text-center px-8 text-[#FDAD0E] font-['Archivo'] font-bold">
+					<p class="text-balance">Solder is a program by <a href="https://hackclub.com" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy">Hack Club</a>, free for teens worldwide! Ends Oct 19.</p>
+				</div>
 
 
 
@@ -80,23 +84,23 @@ import Marquee from "../components/Marquee.astro";
 
 			</div>
 
-			<div class="absolute bottom-12 md:bottom-40 left-0 right-0 flex flex-col justify-center text-center px-8 text-[#FDAD0E] font-['Archivo'] font-bold">
-				<p class="text-balance">Solder is a program by Hack Club, free for teens worldwide! Ends Oct 19.</p>
-			</div>
+
+			<a href="#how-this-works"><img src="/arrows.svg" class="hidden md:block absolute bottom-44 left-0 right-0 mx-auto flex-col justify-center scroll-hint mt-12 bobbing"/></a>
+
 		</div>
 
 
-		<div class="relative py-24" style="background-image: url('/blue-bg.png'); background-repeat: repeat;">
+		<div id="how-this-works" class="relative py-24" style="background-image: url('/blue-bg.png'); background-repeat: repeat;">
 			<Marquee/>
 
 			<div class="mt-44 flex flex-col justify-center items-center">
 
-				<div class="relative isolate">
+				<div class="relative isolate z-20">
 					<img src="/how-it-works-bg.svg" class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none"/>
 					<p class="relative text-4xl text-white">how this works:</p>
 				</div>
 
-				<div class="bg-white p-12 rounded max-w-[1300px] px-8 md:px-24 mx-4 my-4 text-center text-[#FF8E1C]">
+				<div class="bg-white p-12 max-w-[1300px] px-8 md:px-24 mx-4 my-4 text-center text-[#FF8E1C] relative z-10">
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
 						<div class="flex flex-col justify-end">
 							<p class="translate-y-2">1. Design your PCB!</p>
@@ -131,13 +135,22 @@ import Marquee from "../components/Marquee.astro";
 						
 					</div>
 
+					<img src="/blue-triangle.svg" class="absolute -right-1 top-24 h-3"/>
+					<img src="/blue-triangle.svg" class="absolute rotate-180 -left-1 bottom-24 h-3"/>
+
 				</div>
 
-				<div class="-translate-y-10">
-					<StickerButton text="ready? go to tutorial →" href="/start" color="#FF4EA3"/>
+				<div class="-translate-y-10 z-20">
+					<StickerButton text="ready? go to tutorial →" href="/start" color="#FF477B"/>
 				</div>
 
 			</div>
+
+			<img src="/circuitry-white.png" class="hidden md:block absolute top-0 left-0 md:-left-44 2xl:left-0 -scale-x-100 w-120 opacity-20"/>
+			<img src="/circuitry-white.png" class="hidden md:block absolute top-0 right-0 md:-right-44 2xl:right-0 w-120 opacity-20"/>
+
+			<img src="/circuitry-white.png" class="hidden md:block absolute bottom-0 left-0 md:-left-44 2xl:left-0 -scale-x-100 -scale-y-100 w-120 opacity-20"/>
+			<img src="/circuitry-white.png" class="absolute bottom-0 right-0 md:-right-44 2xl:right-0 -scale-y-100 w-120 opacity-20"/>
 
 
 		</div>
@@ -243,8 +256,8 @@ import Marquee from "../components/Marquee.astro";
 		</div>
 
 
-		<div class="flex flex-col justify-center items-center text-center my-24 relative mx-5">
-			<div class="mt-8 border-2 rounded-md border-[#FF60A8] bg-white p-12 py-16 text-[#FF60A8] relative max-w-3xl">
+		<div class="flex flex-col justify-center items-center text-center mb-24 relative mx-5">
+			<div class="mt-8 border-2 rounded-md border-[#FF477B] bg-white p-12 py-16 text-[#FF477B] relative max-w-3xl">
 				<p class="heading text-6xl">what is hack club?</p>
 				<div class="font-['Archivo'] space-y-4 mt-12">
 					<p><a href="https://hackclub.com/" target="_blank" rel="noopenner noreferrer" class="underline hover:decoration-wavy hover:text-[#FF7A60] transition">Hack Club</a> is a 501(c)(3) nonprofit that runs programs and events to encourage more students to build and publish engineering projects.</p>
@@ -267,7 +280,7 @@ import Marquee from "../components/Marquee.astro";
 
 
 			<div class="grid grid-cols-1 md:grid-cols-2 mt-8 font-['Archivo'] max-w-6xl gap-4">
-				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+				<div class="border-dashed border-4 rounded-md border-[#FF477B] bg-white p-8 pb-4 pt-6 text-[#FF477B] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">What are the submission requirements?</p>
 					<ul class="list-disc ml-8 mt-2">
 						<li>you must be between ages 13-18 (inclusive)</li>
@@ -277,7 +290,7 @@ import Marquee from "../components/Marquee.astro";
 						<li>add <i>spice</i> - something unique with flavour - to your PCB!</li>
 					</ul>
 				</div>
-				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+				<div class="border-dashed border-4 rounded-md border-[#FF477B] bg-white p-8 pb-4 pt-6 text-[#FF477B] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">What could I make?</p>
 					<p class="mt-2">Here are some ideas:</p>
 					<ul class="list-disc ml-8">
@@ -287,12 +300,12 @@ import Marquee from "../components/Marquee.astro";
 						<li>a fidget toy!</li>
 					</ul>
 				</div>
-				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+				<div class="border-dashed border-4 rounded-md border-[#FF477B] bg-white p-8 pb-4 pt-6 text-[#FF477B] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">Can I submit if I've made a PCB before?</p>
 					<p class="mt-2">Yes! Please note that this program is targeted towards beginners - 
 						challenge yourself to make something cool with transitors if you're familiar with electronics!</p>
 				</div>
-				<div class="border-dashed border-4 rounded-md border-[#FF60A8] bg-white p-8 pb-4 pt-6 text-[#FF60A8] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
+				<div class="border-dashed border-4 rounded-md border-[#FF477B] bg-white p-8 pb-4 pt-6 text-[#FF477B] hover:text-[#FF7A60] hover:border-[#FF7A60] relative hover:scale-102 transition">
 					<p class="text-xl font-bold">Can I do Solder more than once?</p>
 					<p class="mt-2">No :( This includes if you've already done Solder V1 too. There are plenty of other Hack Club hardware projects you could do!</p>
 				</div>
