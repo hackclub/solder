@@ -20,16 +20,19 @@ const parts = text.split("→");
 		class="bg-white rounded-full p-1 shadow-[2px_2px_2px_rgba(0,0,0,0.2)] hover:scale-103 transition-transform duration-100"
 	>
 		<div
-			class="rounded-full px-8 py-2 text-white text-lg text-center whitespace-nowrap"
+			class="relative overflow-hidden rounded-full px-8 py-2 text-white text-lg text-center whitespace-nowrap"
 			style={`background-color: ${color};`}
 		>
-			{parts.length > 1 ? (
-				<>
-					{parts[0]}<span class="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>{parts.slice(1).join("→")}
-				</>
-			) : (
-				text
-			)}
+			<div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-100 pointer-events-none"></div>
+			<span class="relative">
+				{parts.length > 1 ? (
+					<>
+						{parts[0]}<span class="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>{parts.slice(1).join("→")}
+					</>
+				) : (
+					text
+				)}
+			</span>
 		</div>
 	</div>
 </a>

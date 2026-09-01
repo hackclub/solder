@@ -17,7 +17,7 @@ What you need:
 - solder wire
 - a well-ventilated space
 
-You can also watch this [HOW TO SOLDER! (Beginner's Guide)](https://www.youtube.com/watch?v=3jAw41LRBxU) YouTube video!
+Watch this [HOW TO SOLDER! (Beginner's Guide)](https://www.youtube.com/watch?v=3jAw41LRBxU) YouTube video!
 
 ### After assembly
 

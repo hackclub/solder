@@ -41,7 +41,7 @@ If it looks like that, congrats - you've just started your first PCB project!
 
 ### Kit Contents
 
-here are the parts you get!
+Here are the parts you get!
 
 * 1x 555 Timer
 * 6x 5mm LED

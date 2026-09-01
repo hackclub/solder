@@ -31,7 +31,7 @@ const majorHeadings = headings.filter((header) => header.depth < 4);
             </div>
         </div>
 
-        <aside class="toc-aside hidden xl:block w-48 fixed top-0 right-0 bottom-0 overflow-y-auto p-6 pt-16 border-l border-gray-200">
+        <aside class="toc-aside hidden xl:block w-48 fixed top-0 right-0 bottom-0 overflow-y-auto p-6 pt-16 border-l border-[#DCF3FA]">
             <TOC sections={majorHeadings} />
         </aside>
     </body>
@@ -39,7 +39,7 @@ const majorHeadings = headings.filter((header) => header.depth < 4);
 
 <style>
     .toc-aside {
-        background-color: #dce3fa;
+        background-color: #F9FAFC;
     }
 
     html.dark .toc-aside {
