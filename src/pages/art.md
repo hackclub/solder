@@ -27,7 +27,7 @@ Go to File > Import > Graphics, and a pop up wil open.
 
 Make sure you're importing it onto the Edge.Cuts layer!
 
-You will probably need to change the Import Scale for it to show up in the right size. I usually just spam import until I get the scale right :"D
+You will probably need to change the Import Scale for it to show up in the right size. I usually just spam import until I get the scale right :"D 
 
 ![](https://cdn.hackclub.com/01a01fc3-04ea-79e3-af88-992f9e44f0c5/importgraphics2.png)
 

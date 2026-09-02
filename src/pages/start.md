@@ -44,8 +44,8 @@ If it looks like that, congrats - you've just started your first PCB project!
 Here are the parts you get!
 
 * 1x 555 Timer
-* 6x 5mm LED
-* 24x resistors
+* 6x 5mm LED (various colors)
+* 24x resistors (12x 220Ω, 6x 4.7kΩ, 6x 47kΩ)
 * 15x 2N3904 transistor
 * 15x 2N3906 transistor
 * 1x mini motor disc
@@ -55,5 +55,7 @@ Here are the parts you get!
 * 2x potentiometer
 * 1x breadboard
 * 15x jumper wires
-* 2x CR2032 battery cell
+* 2x CR2032 battery cell holders
+
+Note you'll need to get your own coin cell batteries (those are harder to ship), but the CR2032 is pretty common!
 
