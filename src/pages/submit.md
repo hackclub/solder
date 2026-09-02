@@ -55,7 +55,7 @@ After either @acon or @cyao (on Slack) reacts with the ✅ emoji, it's approved!
 
 ### Here from a club workshop?
 
-You'll need to join the Hack Club Slack in order to ship. Get your club leader to help you with that if you're struggling! You still need to post in #solder-ships. You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
+You'll need to join the Hack Club Slack in order to ship. Get your club leader to help you with that if you're struggling! You still need to post in [#solder-ships](https://hackclub.enterprise.slack.com/archives/C08N2CN8E2C). You'll get great feedback, and have others check over if your circuit is working! It'll also confirm whether your submission got accepted or not.
 
 
 After you submit, we'll coordinate with your club leader to get your boxes shipped at the same time. 
@@ -64,4 +64,4 @@ After you submit, we'll coordinate with your club leader to get your boxes shipp
 
 DM @acon on slack to get a form for your members to fill out to ship, instead of going through the Slack flow!
 
-Post a picture of your club meeting doing Solder in #solder-ships to get a special item shipped to you :D
+Post a picture of your club meeting doing Solder in [#solder-ships](https://hackclub.enterprise.slack.com/archives/C08N2CN8E2C) to get a special item shipped to you :D
