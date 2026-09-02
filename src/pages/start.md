@@ -19,6 +19,10 @@ It's a board that links all the electronics together via copper wires that run t
 
 See also: [SparkFun's article](https://learn.sparkfun.com/tutorials/pcb-basics/all) explaining PCBs!
 
+Here are some PCBs made by hack clubbers:
+
+![](/pcb-examples.png)
+
 ### KiCad Quick Start
 
 Complete beginner? No worries!
