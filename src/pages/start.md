@@ -59,3 +59,27 @@ Here are the parts you get!
 
 Note you'll need to get your own coin cell batteries (those are harder to ship), but the CR2032 is pretty common!
 
+### PCB Design Requirements
+
+This program doesn't use any form of time tracking to approve projects. However, projects do need to meet a minimum quality criteria in order to pass!
+
+- the PCB needs to be original
+- the PCB needs to fit within 100x100mm
+- use the components given in the kit
+
+The PCB is expected to have a custom outline / cool silkscreen, unless it is intentionally rectangular to fit a more technical circuit (ie: something with lots of logic gates). That means your PCB should:
+
+- have a custom outline
+- have rounded corners
+- include silkscreen art (and/or text) on both sides
+- be intentional with part placement
+
+Here are examples of PCBs that would be approved:
+
+![](/pcb-examples-good.png)
+
+And here are examples of PCBs that would be rejected / require changes before resubmitting: 
+
+<img src="/pcb-examples-bad.png" style="max-height: 100px;" />
+
+Please be creative! Make something you'd actually want to look at / put on display / use as a keychain or badge.
