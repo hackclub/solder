@@ -63,6 +63,8 @@ Here are the parts you get!
 
 Note you'll need to get your own coin cell batteries (those are harder to ship), but the CR2032 is pretty common!
 
+The kits are shipped out in waves, so it can take anywhere from 1-4 weeks for them to be shipped out, depending on when you filled the form. We will try to do it as soon as we can though! 
+
 ### PCB Design Requirements
 
 This program doesn't use any form of time tracking to approve projects. However, projects do need to meet a minimum quality criteria in order to pass!
