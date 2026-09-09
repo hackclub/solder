@@ -49,7 +49,7 @@ Here are the parts you get!
 
 * 1x 555 Timer
 * 6x 5mm LED (various colors)
-* 24x resistors (12x 220Ω, 6x 4.7kΩ, 6x 47kΩ)
+* 24x resistors (8x 470Ω, 6x 4.7kΩ, 4x 47kΩ, 2x 10MΩ)
 * 15x 2N3904 transistor
 * 15x 2N3906 transistor
 * 1x mini motor disc
